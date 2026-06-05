@@ -1,0 +1,14 @@
+{
+  "id": "anand6450/ollama-gpu-ngrok-host",
+  "title": "Ollama GPU Ngrok Host",
+  "code_file": "task.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": "true",
+  "enable_gpu": "true",
+  "enable_tpu": "false",
+  "enable_internet": "true",
+  "dataset_sources": [],
+  "competition_sources": [],
+  "model_sources": []
+}
