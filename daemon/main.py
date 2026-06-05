@@ -103,6 +103,7 @@ intent_parser: Optional[IntentParser] = None
 control_plane: Optional[DeterministicControlPlane] = None
 broadcaster: Optional[WebSocketBroadcaster] = None
 executor: Optional[ThreadPoolExecutor] = None
+main_loop: Optional[asyncio.AbstractEventLoop] = None
 
 # Track last-read positions per monitored file
 _file_positions: dict[str, int] = {}
@@ -130,14 +131,11 @@ class LogFileChangeHandler(FileSystemEventHandler):
         src_path: str = getattr(event, "src_path", "")
         if not src_path:
             return
-        try:
-            loop = asyncio.get_event_loop()
-            loop.call_soon_threadsafe(
+        if main_loop is not None:
+            main_loop.call_soon_threadsafe(
                 lambda: asyncio.create_task(_process_log_delta(src_path))
             )
-        except RuntimeError:
-            # Event loop not running yet — skip
-            pass
+
 
 
 async def _process_log_delta(path: str) -> None:
@@ -668,7 +666,9 @@ async def main() -> None:
     )
 
     # Step 5: Load FAISS index
+    global main_loop
     loop = asyncio.get_event_loop()
+    main_loop = loop
     await loop.run_in_executor(executor, faiss_store.load_or_create)
     logger.info(
         f"FAISS store ready. Vectors: {faiss_store.get_vector_count()}"
