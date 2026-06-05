@@ -1,0 +1,48 @@
+# Secrets
+.env
+
+# Runtime data
+data/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.eggs/
+.venv/
+venv/
+env/
+*.egg
+dist/
+build/
+
+# Node
+node_modules/
+
+# Frontend build
+frontend/dist/
+
+# Logs
+*.log
+
+# ngrok
+ngrok_url.txt
+scripts/ngrok_url.txt
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test / coverage
+.pytest_cache/
+htmlcov/
+.coverage
+coverage.xml

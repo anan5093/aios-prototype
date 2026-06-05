@@ -1,0 +1,600 @@
+Jun  1 01:21:20 aios-dev-host kernel[2721]: WARN: Memory pressure detected. Available: 792mb / 7930MB
+Jun  1 01:39:08 aios-dev-host kernel[7016]: WARN: Memory pressure detected. Available: 846mb / 7930MB
+Jun  1 01:56:35 aios-dev-host systemd[1]: Reloading rsyslog.service
+Jun  1 03:11:05 aios-dev-host sshd[9618]: pam_unix(sshd:session): session closed for user aios-user
+Jun  1 03:29:17 aios-dev-host sshd[1333]: Accepted publickey for aios-user from 192.168.1.109 port 55405 ssh2
+Jun  1 04:18:56 aios-dev-host systemd[1]: Failed to start cron.service
+Jun  1 04:27:25 aios-dev-host kernel: [[ 907076.433508]] random: crng reseeded on system resumption
+Jun  1 06:09:07 aios-dev-host sshd[7338]: Accepted publickey for aios-user from 192.168.1.105 port 48311 ssh2
+Jun  1 07:27:02 aios-dev-host kernel[1140]: WARN: Memory pressure detected. Available: 760mb / 7930MB
+Jun  1 08:41:41 aios-dev-host kernel[1]: ERROR: Failed to allocate 392MB for process nginx (pid 15040)
+Jun  1 08:46:15 aios-dev-host CRON[5835]: (aios-user) CMD (/etc/cron.d/health_check.py) exit=1
+Jun  1 08:53:45 aios-dev-host CRON[8673]: (aios-user) CMD (/etc/cron.d/health_check.py) exit=0
+Jun  1 09:01:31 aios-dev-host kernel[6352]: WARN: Memory pressure detected. Available: 544mb / 7930MB
+Jun  1 09:27:02 aios-dev-host CRON[4696]: (aios-user) CMD (/etc/cron.d/backup.sh) exit=0
+Jun  1 10:27:57 aios-dev-host dbus-daemon[1]: [system] Activating via systemd: service name='org.freedesktop.nm' unit
+Jun  1 12:19:44 aios-dev-host systemd[1]: Stopped networkd.service
+Jun  1 12:40:44 aios-dev-host NetworkManager: <info> [12:40:44] device (eth0): state change: prepare -> config
+Jun  1 12:52:45 aios-dev-host kernel: [[ 937397.339960]] usb 1-1: new high-speed USB device number 3 using xhci_hcd
+Jun  1 13:07:27 aios-dev-host CRON[2479]: (aios-user) CMD (/etc/cron.d/db_vacuum.sh) exit=0
+Jun  1 13:30:29 aios-dev-host sshd[6850]: Invalid user admin from 10.0.0.211 port 42213
+Jun  1 14:06:35 aios-dev-host kernel[1]: ERROR: Failed to allocate 326MB for process firefox (pid 48405)
+Jun  1 15:22:23 aios-dev-host systemd[1]: Restarted sshd.service
+Jun  1 16:54:57 aios-dev-host NetworkManager: <info> [16:54:57] device (eth0): state change: ip-config -> activated
+Jun  1 17:24:15 aios-dev-host NetworkManager: <info> [17:24:15] device (eth0): state change: disconnected -> prepare
+Jun  1 17:28:32 aios-dev-host NetworkManager: <info> [17:28:32] device (eth0): state change: config -> ip-config
+Jun  1 18:21:02 aios-dev-host CRON[5332]: (aios-user) CMD (/etc/cron.d/db_vacuum.sh) exit=0
+Jun  1 18:25:40 aios-dev-host kernel: [[ 957371.743661]] usb 1-1: USB disconnect, device number 2
+Jun  1 18:37:31 aios-dev-host kernel: [[ 958082.022762]] usb 1-1: USB disconnect, device number 2
+Jun  1 18:48:52 aios-dev-host CRON[8451]: (aios-user) CMD (/etc/cron.d/sync_data.sh) exit=0
+Jun  1 18:58:17 aios-dev-host NetworkManager: <info> [18:58:17] device (eth0): state change: ip-config -> activated
+Jun  1 20:22:51 aios-dev-host kernel: [[ 964403.941645]] random: crng reseeded on system resumption
+Jun  1 20:47:31 aios-dev-host NetworkManager: <info> [20:47:31] device (eth0): state change: ip-config -> activated
+Jun  1 21:15:12 aios-dev-host systemd[1]: Stopped networkd.service
+Jun  1 21:44:08 aios-dev-host sshd[4950]: Accepted publickey for aios-user from 192.168.1.197 port 61531 ssh2
+Jun  1 22:36:13 aios-dev-host CRON[7242]: (aios-user) CMD (/etc/cron.d/health_check.py) exit=0
+Jun  1 23:22:28 aios-dev-host sshd[6447]: Invalid user admin from 10.0.0.44 port 41452
+Jun  1 23:40:36 aios-dev-host systemd[1]: Restarted aios-daemon.service
+Jun  2 00:49:25 aios-dev-host kernel: [[ 980396.106205]] NET: Registered PF_INET6 protocol family
+Jun  2 01:40:37 aios-dev-host NetworkManager: <info> [01:40:37] device (eth0): state change: ip-config -> activated
+Jun  2 02:04:39 aios-dev-host CRON[4830]: (aios-user) CMD (/etc/cron.d/health_check.py) exit=0
+Jun  2 02:20:37 aios-dev-host sshd[9945]: Disconnected from user aios-user 192.168.1.96 port 61063
+Jun  2 03:39:28 aios-dev-host sshd[8612]: Disconnected from user aios-user 192.168.1.188 port 55680
+Jun  2 04:11:29 aios-dev-host systemd[1]: Reloading postgresql.service
+Jun  2 04:29:19 aios-dev-host CRON[6374]: (aios-user) CMD (/etc/cron.d/db_vacuum.sh) exit=0
+Jun  2 05:25:10 aios-dev-host NetworkManager: <info> [05:25:10] connectivity check started
+Jun  2 05:26:09 aios-dev-host CRON[2035]: (aios-user) CMD (/etc/cron.d/sync_data.sh) exit=0
+Jun  2 07:03:12 aios-dev-host dbus-daemon[1]: [system] Activating via systemd: service name='org.freedesktop.nm' unit
+Jun  2 07:09:08 aios-dev-host systemd[1]: Stopped docker.service
+Jun  2 07:18:36 aios-dev-host NetworkManager: <info> [07:18:36] connectivity check started
+Jun  2 07:50:19 aios-dev-host kernel: [[1005650.055883]] audit: type=1400 audit([1005650.055883]:1): apparmor="ALLOWED"
+Jun  2 07:55:51 aios-dev-host kernel[1]: ERROR: Failed to allocate 342MB for process aios-daemon (pid 31976)
+Jun  2 08:03:07 aios-dev-host sshd[3209]: pam_unix(sshd:session): session opened for user aios-user by (uid=0)
+Jun  2 08:29:53 aios-dev-host sshd[1605]: Accepted publickey for aios-user from 192.168.1.85 port 46605 ssh2
+Jun  2 11:57:41 aios-dev-host systemd[1]: Reloading resolved.service
+Jun  2 12:14:17 aios-dev-host sshd[4268]: Invalid user admin from 10.0.0.236 port 41373
+Jun  2 13:11:01 aios-dev-host NetworkManager: <info> [13:11:01] device (eth0): state change: ip-config -> activated
+Jun  2 13:38:39 aios-dev-host kernel: [[1026550.451498]] usb 1-1: new high-speed USB device number 3 using xhci_hcd
+Jun  2 14:32:32 aios-dev-host systemd[1]: Failed to start networkd.service
+Jun  2 15:04:12 aios-dev-host systemd[1]: Failed to start docker.service
+Jun  2 17:19:09 aios-dev-host CRON[7689]: (aios-user) CMD (/etc/cron.d/db_vacuum.sh) exit=0
+Jun  2 17:37:29 aios-dev-host CRON[1742]: (aios-user) CMD (/etc/cron.d/backup.sh) exit=0
+Jun  2 17:54:16 aios-dev-host kernel: [1041887.130185] INFO: task kworker/u8:3:159 blocked for more than 120 seconds
+Jun  2 18:00:47 aios-dev-host kernel: [1042279.929641] INFO: task kworker/u8:0:865 blocked for more than 120 seconds
+Jun  2 18:02:38 aios-dev-host sshd[6080]: pam_unix(sshd:session): session closed for user aios-user
+Jun  2 18:03:45 aios-dev-host systemd[1]: Restarted rsyslog.service
+Jun  2 18:09:37 aios-dev-host sshd[8756]: Disconnected from user aios-user 192.168.1.74 port 41199
+Jun  2 19:37:04 aios-dev-host NetworkManager: <info> [19:37:04] device (eth0): state change: activated -> disconnected
+Jun  2 20:12:37 aios-dev-host kernel: [[1050188.719392]] audit: type=1400 audit([1050188.719392]:1): apparmor="ALLOWED"
+Jun  2 20:34:34 aios-dev-host kernel[7768]: WARN: Memory pressure detected. Available: 760mb / 7930MB
+Jun  2 20:45:54 aios-dev-host sshd[5687]: Invalid user admin from 10.0.0.101 port 41566
+Jun  2 20:59:07 aios-dev-host kernel[1]: ERROR: Failed to allocate 174MB for process nginx (pid 53920)
+Jun  2 21:15:21 aios-dev-host systemd[1]: Reloading cron.service
+Jun  2 22:23:41 aios-dev-host systemd[1]: Stopped postgresql.service
+Jun  2 22:46:40 aios-dev-host kernel[1]: ERROR: Failed to allocate 258MB for process node (pid 7181)
+Jun  2 23:24:02 aios-dev-host NetworkManager: <info> [23:24:02] device (eth0): state change: ip-config -> activated
+Jun  2 23:32:31 aios-dev-host systemd[1]: Failed to start postgresql.service
+Jun  2 23:44:30 aios-dev-host kernel[1]: ERROR: Failed to allocate 99MB for process llm-worker (pid 29249)
+Jun  3 01:35:53 aios-dev-host kernel: [[1069584.062012]] random: crng reseeded on system resumption
+Jun  3 02:00:11 aios-dev-host kernel[4219]: WARN: Memory pressure detected. Available: 691mb / 7930MB
+Jun  3 03:20:14 aios-dev-host CRON[9071]: (aios-user) CMD (/etc/cron.d/backup.sh) exit=0
+Jun  3 03:26:05 aios-dev-host systemd[1]: Stopped sshd.service
+Jun  3 06:38:41 aios-dev-host NetworkManager: <info> [06:38:41] connectivity check started
+Jun  3 07:27:40 aios-dev-host NetworkManager: <info> [07:27:40] connectivity check started
+Jun  3 07:33:49 aios-dev-host rsyslog: rsyslogd was HUPed
+Jun  3 08:52:52 aios-dev-host sshd[5476]: pam_unix(sshd:session): session opened for user aios-user by (uid=0)
+Jun  3 09:37:57 aios-dev-host systemd[1]: Failed to start cron.service
+Jun  3 09:44:55 aios-dev-host CRON[4846]: (aios-user) CMD (/etc/cron.d/backup.sh) exit=0
+Jun  3 09:49:54 aios-dev-host NetworkManager: <info> [09:49:54] device (eth0): state change: prepare -> config
+Jun  3 10:47:28 aios-dev-host kernel: [[1102680.418200]] NET: Registered PF_INET6 protocol family
+Jun  3 11:08:03 aios-dev-host kernel[1]: ERROR: Failed to allocate 231MB for process redis-server (pid 27941)
+Jun  3 11:26:29 aios-dev-host kernel: [[1105021.622116]] usb 1-1: USB disconnect, device number 2
+Jun  3 13:05:28 aios-dev-host systemd[1]: Reloading resolved.service
+Jun  3 13:24:19 aios-dev-host systemd[1]: Reloading sshd.service
+Jun  3 13:32:02 aios-dev-host sshd[7553]: pam_unix(sshd:session): session opened for user aios-user by (uid=0)
+Jun  3 14:00:06 aios-dev-host sshd[6554]: pam_unix(sshd:session): session opened for user aios-user by (uid=0)
+Jun  3 14:00:43 aios-dev-host CRON[7367]: (aios-user) CMD (/etc/cron.d/sync_data.sh) exit=0
+Jun  3 14:22:57 aios-dev-host kernel[288]: WARN: Memory pressure detected. Available: 716mb / 7930MB
+Jun  3 14:42:30 aios-dev-host kernel: [1116782.156915] INFO: task kworker/u8:5:158 blocked for more than 120 seconds
+Jun  3 15:07:08 aios-dev-host systemd[1]: Stopped rsyslog.service
+Jun  3 15:32:52 aios-dev-host systemd[1]: Failed to start nginx.service
+Jun  3 16:38:29 aios-dev-host systemd[1]: Started cron.service
+Jun  3 16:40:06 aios-dev-host kernel[1]: ERROR: Failed to allocate 289MB for process embed-worker (pid 4550)
+Jun  3 17:33:40 aios-dev-host systemd[1]: Reloading networkd.service
+Jun  3 18:00:31 aios-dev-host systemd[1]: Started aios-daemon.service
+Jun  3 18:33:47 aios-dev-host kernel: [[1130658.801345]] NET: Registered PF_INET6 protocol family
+Jun  3 18:53:52 aios-dev-host systemd[1]: Reloading resolved.service
+Jun  3 20:00:47 aios-dev-host NetworkManager: <info> [20:00:47] device (eth0): state change: activated -> disconnected
+Jun  3 20:52:03 aios-dev-host systemd[1]: Restarted aios-daemon.service
+Jun  3 22:01:42 aios-dev-host systemd[1]: Started redis.service
+Jun  3 22:50:44 aios-dev-host kernel: [[1146075.529933]] usb 1-1: new high-speed USB device number 3 using xhci_hcd
+Jun  3 23:21:32 aios-dev-host NetworkManager: <info> [23:21:32] device (eth0): state change: disconnected -> prepare
+Jun  3 23:30:44 aios-dev-host kernel: [[1148475.141543]] random: crng reseeded on system resumption
+Jun  4 00:58:24 aios-dev-host kernel[1]: ERROR: Failed to allocate 394MB for process llm-worker (pid 65498)
+Jun  4 01:49:31 aios-dev-host kernel: [[1156802.361184]] NET: Registered PF_INET6 protocol family
+Jun  4 03:05:16 aios-dev-host CRON[9850]: (aios-user) CMD (/etc/cron.d/db_vacuum.sh) exit=0
+Jun  4 03:13:33 aios-dev-host kernel: [[1161845.114238]] audit: type=1400 audit([1161845.114238]:1): apparmor="ALLOWED"
+Jun  4 05:35:30 aios-dev-host kernel: [[1170362.230392]] random: crng reseeded on system resumption
+Jun  4 05:48:31 aios-dev-host NetworkManager: <info> [05:48:31] device (eth0): state change: prepare -> config
+Jun  4 06:05:37 aios-dev-host CRON[7797]: (aios-user) CMD (/etc/cron.d/db_vacuum.sh) exit=0
+Jun  4 06:46:43 aios-dev-host NetworkManager: <info> [06:46:43] connectivity check started
+Jun  4 07:08:57 aios-dev-host systemd[1]: Started aios-daemon.service
+Jun  4 07:42:01 aios-dev-host systemd[1]: Restarted docker.service
+Jun  4 09:42:12 aios-dev-host systemd[1]: Started resolved.service
+Jun  4 10:04:58 aios-dev-host NetworkManager: <info> [10:04:58] device (eth0): state change: prepare -> config
+Jun  4 10:46:59 aios-dev-host kernel: [[1189051.293715]] audit: type=1400 audit([1189051.293715]:1): apparmor="ALLOWED"
+Jun  4 11:03:57 aios-dev-host systemd[1]: Failed to start redis.service
+Jun  4 11:07:29 aios-dev-host NetworkManager: <info> [11:07:29] device (eth0): state change: prepare -> config
+Jun  4 11:29:45 aios-dev-host dbus-daemon[1]: [system] Activating via systemd: service name='org.freedesktop.nm' unit
+Jun  4 11:58:49 aios-dev-host dbus-daemon[1]: [system] Activating via systemd: service name='org.freedesktop.nm' unit
+Jun  4 12:18:01 aios-dev-host NetworkManager: <info> [12:18:01] device (eth0): state change: prepare -> config
+Jun  4 12:44:06 aios-dev-host NetworkManager: <info> [12:44:06] device (eth0): state change: activated -> disconnected
+Jun  4 14:50:39 aios-dev-host rsyslog: rsyslogd was HUPed
+Jun  4 15:27:53 aios-dev-host CRON[7686]: (aios-user) CMD (/etc/cron.d/backup.sh) exit=1
+Jun  4 15:34:17 aios-dev-host kernel: [[1206288.612206]] NET: Registered PF_INET6 protocol family
+Jun  4 16:00:59 aios-dev-host NetworkManager: <info> [16:00:59] device (eth0): state change: disconnected -> prepare
+Jun  4 16:01:50 aios-dev-host dbus-daemon[1]: [system] Activating via systemd: service name='org.freedesktop.nm' unit
+May 21 16:41:00 aios-dev-host kernel[1]: ERROR: Failed to allocate 79MB for process node (pid 58541)
+May 21 19:04:27 aios-dev-host sshd[4232]: Disconnected from user aios-user 192.168.1.54 port 59739
+May 21 19:05:18 aios-dev-host sshd[2234]: pam_unix(sshd:session): session opened for user aios-user by (uid=0)
+May 21 19:37:16 aios-dev-host systemd[1]: Started nginx.service
+May 21 21:47:37 aios-dev-host NetworkManager: <info> [21:47:37] device (eth0): state change: disconnected -> prepare
+May 21 22:47:18 aios-dev-host sshd[8601]: pam_unix(sshd:session): session closed for user aios-user
+May 21 23:02:07 aios-dev-host kernel[1]: ERROR: Failed to allocate 340MB for process chrome (pid 6613)
+May 21 23:27:42 aios-dev-host CRON[8451]: (aios-user) CMD (/etc/cron.d/sync_data.sh) exit=0
+May 21 23:29:56 aios-dev-host sshd[8354]: pam_unix(sshd:session): session closed for user aios-user
+May 22 01:10:54 aios-dev-host CRON[5135]: (aios-user) CMD (/etc/cron.d/backup.sh) exit=0
+May 22 01:11:53 aios-dev-host kernel: [[  31344.722103]] NET: Registered PF_INET6 protocol family
+May 22 02:47:31 aios-dev-host sshd[6295]: Invalid user admin from 10.0.0.231 port 60552
+May 22 02:57:16 aios-dev-host kernel: [[  37667.922145]] usb 1-1: new high-speed USB device number 3 using xhci_hcd
+May 22 02:57:28 aios-dev-host NetworkManager: <info> [02:57:28] device (eth0): state change: config -> ip-config
+May 22 03:10:13 aios-dev-host kernel[850]: WARN: Memory pressure detected. Available: 221mb / 7930MB
+May 22 03:22:22 aios-dev-host dbus-daemon[1]: [system] Activating via systemd: service name='org.freedesktop.nm' unit
+May 22 03:27:29 aios-dev-host CRON[7622]: (aios-user) CMD (/etc/cron.d/health_check.py) exit=0
+May 22 04:35:48 aios-dev-host systemd[1]: Failed to start redis.service
+May 22 05:30:10 aios-dev-host systemd[1]: Started nginx.service
+May 22 05:50:40 aios-dev-host systemd[1]: Reloading docker.service
+May 22 05:53:45 aios-dev-host systemd[1]: Failed to start docker.service
+May 22 06:32:44 aios-dev-host systemd[1]: Restarted postgresql.service
+May 22 06:42:17 aios-dev-host sshd[3473]: pam_unix(sshd:session): session opened for user aios-user by (uid=0)
+May 22 07:05:26 aios-dev-host kernel[3833]: WARN: Memory pressure detected. Available: 827mb / 7930MB
+May 22 07:18:16 aios-dev-host systemd[1]: Reloading sshd.service
+May 22 07:45:05 aios-dev-host sshd[8245]: Invalid user admin from 10.0.0.171 port 49922
+May 22 09:20:20 aios-dev-host systemd[1]: Started docker.service
+May 22 09:29:08 aios-dev-host NetworkManager: <info> [09:29:08] device (eth0): state change: config -> ip-config
+May 22 09:29:20 aios-dev-host kernel: [  61191.909610] INFO: task kworker/u8:0:195 blocked for more than 120 seconds
+May 22 09:33:35 aios-dev-host systemd[1]: Stopped networkd.service
+May 22 10:10:04 aios-dev-host sshd[1920]: Accepted publickey for aios-user from 192.168.1.100 port 56624 ssh2
+May 22 11:36:10 aios-dev-host systemd[1]: Started docker.service
+May 22 11:45:49 aios-dev-host kernel: [[  69380.773183]] audit: type=1400 audit([  69380.773183]:1): apparmor="ALLOWED"
+May 22 12:31:46 aios-dev-host CRON[9889]: (aios-user) CMD (/etc/cron.d/sync_data.sh) exit=0
+May 22 12:43:43 aios-dev-host CRON[1888]: (aios-user) CMD (/etc/cron.d/db_vacuum.sh) exit=1
+May 22 12:50:10 aios-dev-host NetworkManager: <info> [12:50:10] device (eth0): state change: disconnected -> prepare
+May 22 13:50:48 aios-dev-host NetworkManager: <info> [13:50:48] device (eth0): state change: config -> ip-config
+May 22 14:34:57 aios-dev-host kernel: [[  79528.982317]] usb 1-1: new high-speed USB device number 3 using xhci_hcd
+May 22 15:19:34 aios-dev-host systemd[1]: Reloading resolved.service
+May 22 15:30:52 aios-dev-host systemd[1]: Failed to start cron.service
+May 22 15:36:18 aios-dev-host systemd[1]: Reloading docker.service
+May 22 15:49:00 aios-dev-host systemd[1]: Failed to start cron.service
+May 22 16:24:27 aios-dev-host CRON[9167]: (aios-user) CMD (/etc/cron.d/cleanup_logs.sh) exit=0
+May 22 16:42:31 aios-dev-host sshd[6085]: Accepted publickey for aios-user from 192.168.1.128 port 54808 ssh2
+May 22 17:22:22 aios-dev-host kernel: [[  89573.441409]] usb 1-1: new high-speed USB device number 3 using xhci_hcd
+May 22 17:24:38 aios-dev-host kernel: [[  89710.478282]] audit: type=1400 audit([  89710.478282]:1): apparmor="ALLOWED"
+May 22 18:19:29 aios-dev-host kernel: [[  93000.582702]] audit: type=1400 audit([  93000.582702]:1): apparmor="ALLOWED"
+May 22 18:58:05 aios-dev-host kernel[1407]: WARN: Memory pressure detected. Available: 446mb / 7930MB
+May 22 18:59:17 aios-dev-host kernel: [[  95388.594287]] audit: type=1400 audit([  95388.594287]:1): apparmor="ALLOWED"
+May 22 19:46:13 aios-dev-host CRON[4335]: (aios-user) CMD (/etc/cron.d/db_vacuum.sh) exit=0
+May 22 20:02:15 aios-dev-host systemd[1]: Restarted sshd.service
+May 22 20:14:55 aios-dev-host kernel: [[  99926.789884]] usb 1-1: USB disconnect, device number 2
+May 22 21:02:12 aios-dev-host sshd[1932]: Accepted publickey for aios-user from 192.168.1.104 port 49406 ssh2
+May 22 21:06:43 aios-dev-host CRON[5719]: (aios-user) CMD (/etc/cron.d/health_check.py) exit=0
+May 22 22:06:10 aios-dev-host sshd[2479]: pam_unix(sshd:session): session closed for user aios-user
+May 22 23:17:36 aios-dev-host NetworkManager: <info> [23:17:36] device (eth0): state change: prepare -> config
+May 22 23:52:59 aios-dev-host kernel: [[ 113011.426311]] usb 1-1: new high-speed USB device number 3 using xhci_hcd
+May 22 23:58:22 aios-dev-host kernel[1754]: WARN: Memory pressure detected. Available: 388mb / 7930MB
+May 23 01:33:34 aios-dev-host kernel: [ 119046.568952] INFO: task kworker/u8:3:270 blocked for more than 120 seconds
+May 23 01:50:01 aios-dev-host CRON[2989]: (aios-user) CMD (/etc/cron.d/db_vacuum.sh) exit=1
+May 23 02:05:06 aios-dev-host systemd[1]: Failed to start redis.service
+May 23 02:50:02 aios-dev-host kernel[4654]: WARN: Memory pressure detected. Available: 539mb / 7930MB
+May 23 02:55:46 aios-dev-host kernel[6077]: WARN: Memory pressure detected. Available: 614mb / 7930MB
+May 23 02:57:51 aios-dev-host dbus-daemon[1]: [system] Activating via systemd: service name='org.freedesktop.nm' unit
+May 23 03:17:46 aios-dev-host systemd[1]: Restarted cron.service
+May 23 03:38:12 aios-dev-host CRON[3594]: (aios-user) CMD (/etc/cron.d/backup.sh) exit=0
+May 23 04:45:59 aios-dev-host NetworkManager: <info> [04:45:59] device (eth0): state change: config -> ip-config
+May 23 05:25:35 aios-dev-host NetworkManager: <info> [05:25:35] device (eth0): state change: config -> ip-config
+May 23 05:53:54 aios-dev-host kernel[6165]: WARN: Memory pressure detected. Available: 316mb / 7930MB
+May 23 05:58:22 aios-dev-host kernel[1]: ERROR: Failed to allocate 424MB for process nginx (pid 54478)
+May 23 06:04:51 aios-dev-host systemd[1]: Reloading nginx.service
+May 23 06:40:38 aios-dev-host NetworkManager: <info> [06:40:38] device (eth0): state change: config -> ip-config
+May 23 06:44:02 aios-dev-host sshd[7299]: pam_unix(sshd:session): session closed for user aios-user
+May 23 06:48:15 aios-dev-host sshd[1672]: Disconnected from user aios-user 192.168.1.125 port 58732
+May 23 06:56:03 aios-dev-host NetworkManager: <info> [06:56:03] connectivity check started
+May 23 07:03:22 aios-dev-host CRON[7684]: (aios-user) CMD (/etc/cron.d/health_check.py) exit=0
+May 23 07:11:22 aios-dev-host sshd[6267]: pam_unix(sshd:session): session closed for user aios-user
+May 23 08:03:32 aios-dev-host kernel: [[ 142443.003381]] NET: Registered PF_INET6 protocol family
+May 23 10:25:58 aios-dev-host kernel[3532]: WARN: Memory pressure detected. Available: 513mb / 7930MB
+May 23 10:36:04 aios-dev-host kernel: [[ 151595.275882]] usb 1-1: USB disconnect, device number 2
+May 23 10:53:30 aios-dev-host NetworkManager: <info> [10:53:30] device (eth0): state change: activated -> disconnected
+May 23 10:54:16 aios-dev-host rsyslog: rsyslogd was HUPed
+May 23 11:04:55 aios-dev-host NetworkManager: <info> [11:04:55] device (eth0): state change: prepare -> config
+May 23 11:36:42 aios-dev-host kernel: [[ 155233.125620]] usb 1-1: new high-speed USB device number 3 using xhci_hcd
+May 23 11:50:46 aios-dev-host dbus-daemon[1]: [system] Activating via systemd: service name='org.freedesktop.nm' unit
+May 23 12:05:40 aios-dev-host kernel: [[ 156971.226490]] random: crng reseeded on system resumption
+May 23 12:26:48 aios-dev-host systemd[1]: Restarted sshd.service
+May 23 12:27:59 aios-dev-host systemd[1]: Reloading resolved.service
+May 23 12:46:37 aios-dev-host NetworkManager: <info> [12:46:37] device (eth0): state change: config -> ip-config
+May 23 12:59:48 aios-dev-host systemd[1]: Restarted aios-daemon.service
+May 23 14:05:45 aios-dev-host dbus-daemon[1]: [system] Activating via systemd: service name='org.freedesktop.nm' unit
+May 23 14:36:07 aios-dev-host sshd[3471]: Accepted publickey for aios-user from 192.168.1.25 port 54762 ssh2
+May 23 14:45:24 aios-dev-host kernel: [[ 166556.759192]] usb 1-1: USB disconnect, device number 2
+May 23 15:22:33 aios-dev-host kernel[4474]: WARN: Memory pressure detected. Available: 836mb / 7930MB
+May 23 16:09:40 aios-dev-host sshd[6626]: pam_unix(sshd:session): session closed for user aios-user
+May 23 16:16:57 aios-dev-host CRON[2858]: (aios-user) CMD (/etc/cron.d/backup.sh) exit=0
+May 23 17:41:47 aios-dev-host sshd[3827]: pam_unix(sshd:session): session opened for user aios-user by (uid=0)
+May 23 18:19:53 aios-dev-host NetworkManager: <info> [18:19:53] device (eth0): state change: prepare -> config
+May 23 18:33:06 aios-dev-host CRON[3522]: (aios-user) CMD (/etc/cron.d/db_vacuum.sh) exit=0
+May 23 18:34:24 aios-dev-host systemd[1]: Restarted networkd.service
+May 23 19:50:43 aios-dev-host kernel[1]: ERROR: Failed to allocate 85MB for process docker-proxy (pid 51189)
+May 23 20:02:47 aios-dev-host kernel: [[ 185598.530513]] audit: type=1400 audit([ 185598.530513]:1): apparmor="ALLOWED"
+May 23 20:43:18 aios-dev-host systemd[1]: Reloading postgresql.service
+May 23 21:05:10 aios-dev-host CRON[9337]: (aios-user) CMD (/etc/cron.d/db_vacuum.sh) exit=0
+May 23 21:22:51 aios-dev-host sshd[8199]: pam_unix(sshd:session): session closed for user aios-user
+May 23 21:24:47 aios-dev-host kernel: [[ 190518.871963]] random: crng reseeded on system resumption
+May 23 21:58:54 aios-dev-host systemd[1]: Reloading resolved.service
+May 23 22:08:12 aios-dev-host kernel[1269]: WARN: Memory pressure detected. Available: 868mb / 7930MB
+May 23 22:14:48 aios-dev-host kernel: [[ 193519.156057]] usb 1-1: USB disconnect, device number 2
+May 23 22:31:42 aios-dev-host CRON[8905]: (aios-user) CMD (/etc/cron.d/health_check.py) exit=1
+May 23 22:46:58 aios-dev-host systemd[1]: Reloading sshd.service
+May 23 22:54:43 aios-dev-host dbus-daemon[1]: [system] Activating via systemd: service name='org.freedesktop.nm' unit
+May 23 23:05:30 aios-dev-host systemd[1]: Stopped sshd.service
+May 24 00:29:02 aios-dev-host kernel: [[ 201573.604045]] NET: Registered PF_INET6 protocol family
+May 24 00:59:02 aios-dev-host sshd[3600]: Invalid user admin from 10.0.0.103 port 52217
+May 24 02:00:53 aios-dev-host kernel: [[ 207084.378814]] usb 1-1: USB disconnect, device number 2
+May 24 02:30:13 aios-dev-host kernel: [[ 208845.489920]] NET: Registered PF_INET6 protocol family
+May 24 02:59:09 aios-dev-host kernel: [[ 210580.588288]] random: crng reseeded on system resumption
+May 24 03:21:19 aios-dev-host CRON[8483]: (aios-user) CMD (/etc/cron.d/db_vacuum.sh) exit=0
+May 24 03:31:29 aios-dev-host sshd[7347]: pam_unix(sshd:session): session closed for user aios-user
+May 24 03:58:51 aios-dev-host systemd[1]: Stopped nginx.service
+May 24 04:31:06 aios-dev-host kernel[1]: ERROR: Failed to allocate 114MB for process firefox (pid 44237)
+May 24 04:45:23 aios-dev-host systemd[1]: Started resolved.service
+May 24 05:07:28 aios-dev-host rsyslog: rsyslogd was HUPed
+May 24 07:00:12 aios-dev-host kernel: [[ 225043.370545]] usb 1-1: new high-speed USB device number 3 using xhci_hcd
+May 24 08:24:05 aios-dev-host kernel: [ 230076.014218] INFO: task kworker/u8:6:597 blocked for more than 120 seconds
+May 24 09:06:01 aios-dev-host kernel[2903]: WARN: Memory pressure detected. Available: 773mb / 7930MB
+May 24 10:26:55 aios-dev-host kernel: [[ 237446.665866]] usb 1-1: new high-speed USB device number 3 using xhci_hcd
+May 24 10:57:30 aios-dev-host CRON[7284]: (aios-user) CMD (/etc/cron.d/sync_data.sh) exit=0
+May 24 11:32:52 aios-dev-host systemd[1]: Failed to start docker.service
+May 24 11:45:04 aios-dev-host kernel: [[ 242135.272586]] usb 1-1: USB disconnect, device number 2
+May 24 13:26:25 aios-dev-host NetworkManager: <info> [13:26:25] connectivity check started
+May 24 15:15:46 aios-dev-host systemd[1]: Restarted docker.service
+May 24 15:27:57 aios-dev-host sshd[1857]: Invalid user admin from 10.0.0.212 port 60672
+May 24 15:45:31 aios-dev-host NetworkManager: <info> [15:45:31] device (eth0): state change: prepare -> config
+May 24 16:35:13 aios-dev-host kernel: [[ 259544.059823]] random: crng reseeded on system resumption
+May 24 16:46:33 aios-dev-host sshd[2079]: pam_unix(sshd:session): session closed for user aios-user
+May 24 16:50:12 aios-dev-host kernel[4110]: WARN: Memory pressure detected. Available: 696mb / 7930MB
+May 24 17:29:38 aios-dev-host NetworkManager: <info> [17:29:38] device (eth0): state change: prepare -> config
+May 24 18:55:55 aios-dev-host NetworkManager: <info> [18:55:55] device (eth0): state change: disconnected -> prepare
+May 24 19:23:37 aios-dev-host systemd[1]: Stopped sshd.service
+May 24 19:50:11 aios-dev-host kernel: [[ 271242.819542]] NET: Registered PF_INET6 protocol family
+May 24 20:01:38 aios-dev-host CRON[2143]: (aios-user) CMD (/etc/cron.d/cleanup_logs.sh) exit=0
+May 24 20:14:57 aios-dev-host kernel: [[ 272728.422065]] random: crng reseeded on system resumption
+May 24 21:24:35 aios-dev-host CRON[6568]: (aios-user) CMD (/etc/cron.d/health_check.py) exit=1
+May 24 22:39:55 aios-dev-host kernel[7673]: WARN: Memory pressure detected. Available: 317mb / 7930MB
+May 24 22:46:43 aios-dev-host NetworkManager: <info> [22:46:43] connectivity check started
+May 24 22:55:18 aios-dev-host CRON[1042]: (aios-user) CMD (/etc/cron.d/sync_data.sh) exit=0
+May 24 23:47:08 aios-dev-host kernel: [[ 285460.088905]] audit: type=1400 audit([ 285460.088905]:1): apparmor="ALLOWED"
+May 24 23:49:30 aios-dev-host NetworkManager: <info> [23:49:30] device (eth0): state change: config -> ip-config
+May 24 23:52:39 aios-dev-host sshd[7333]: pam_unix(sshd:session): session closed for user aios-user
+May 25 00:02:04 aios-dev-host kernel: [[ 286356.927679]] usb 1-1: USB disconnect, device number 2
+May 25 00:02:06 aios-dev-host systemd[1]: Restarted postgresql.service
+May 25 01:05:09 aios-dev-host CRON[9022]: (aios-user) CMD (/etc/cron.d/health_check.py) exit=0
+May 25 02:14:44 aios-dev-host sshd[3463]: pam_unix(sshd:session): session closed for user aios-user
+May 25 02:34:15 aios-dev-host systemd[1]: Failed to start redis.service
+May 25 02:46:29 aios-dev-host kernel[4522]: WARN: Memory pressure detected. Available: 538mb / 7930MB
+May 25 03:52:31 aios-dev-host systemd[1]: Failed to start nginx.service
+May 25 03:53:00 aios-dev-host CRON[9824]: (aios-user) CMD (/etc/cron.d/cleanup_logs.sh) exit=1
+May 25 04:02:23 aios-dev-host kernel: [ 300774.981699] INFO: task kworker/u8:7:318 blocked for more than 120 seconds
+May 25 04:25:34 aios-dev-host kernel: [ 302165.120452] INFO: task kworker/u8:6:160 blocked for more than 120 seconds
+May 25 04:52:04 aios-dev-host systemd[1]: Restarted postgresql.service
+May 25 06:20:45 aios-dev-host sshd[3317]: Invalid user admin from 10.0.0.244 port 51462
+May 25 08:06:30 aios-dev-host systemd[1]: Failed to start aios-daemon.service
+May 25 08:59:24 aios-dev-host kernel[1]: ERROR: Failed to allocate 293MB for process docker-proxy (pid 11821)
+May 25 09:21:06 aios-dev-host systemd[1]: Reloading resolved.service
+May 25 09:22:13 aios-dev-host kernel[9225]: WARN: Memory pressure detected. Available: 805mb / 7930MB
+May 25 09:22:54 aios-dev-host CRON[6446]: (aios-user) CMD (/etc/cron.d/db_vacuum.sh) exit=0
+May 25 09:24:44 aios-dev-host CRON[8460]: (aios-user) CMD (/etc/cron.d/sync_data.sh) exit=1
+May 25 09:39:17 aios-dev-host NetworkManager: <info> [09:39:17] device (eth0): state change: activated -> disconnected
+May 25 09:44:16 aios-dev-host systemd[1]: Failed to start resolved.service
+May 25 09:44:37 aios-dev-host CRON[4912]: (aios-user) CMD (/etc/cron.d/health_check.py) exit=0
+May 25 10:06:34 aios-dev-host kernel: [[ 322625.931884]] audit: type=1400 audit([ 322625.931884]:1): apparmor="ALLOWED"
+May 25 10:08:40 aios-dev-host kernel[1]: ERROR: Failed to allocate 185MB for process docker-proxy (pid 58175)
+May 25 11:55:04 aios-dev-host sshd[7421]: Accepted publickey for aios-user from 192.168.1.43 port 59498 ssh2
+May 25 11:57:57 aios-dev-host CRON[4826]: (aios-user) CMD (/etc/cron.d/sync_data.sh) exit=1
+May 25 12:16:31 aios-dev-host sshd[6072]: Invalid user admin from 10.0.0.153 port 52343
+May 25 12:42:24 aios-dev-host rsyslog: rsyslogd was HUPed
+May 25 13:11:14 aios-dev-host NetworkManager: <info> [13:11:14] device (eth0): state change: activated -> disconnected
+May 25 13:39:20 aios-dev-host NetworkManager: <info> [13:39:20] device (eth0): state change: activated -> disconnected
+May 25 13:51:21 aios-dev-host kernel[5413]: WARN: Memory pressure detected. Available: 374mb / 7930MB
+May 25 13:57:06 aios-dev-host CRON[6213]: (aios-user) CMD (/etc/cron.d/db_vacuum.sh) exit=0
+May 25 13:57:48 aios-dev-host kernel[3852]: WARN: Memory pressure detected. Available: 207mb / 7930MB
+May 25 14:04:56 aios-dev-host kernel: [ 336928.019291] INFO: task kworker/u8:2:488 blocked for more than 120 seconds
+May 25 14:06:06 aios-dev-host systemd[1]: Restarted networkd.service
+May 25 14:07:51 aios-dev-host kernel: [[ 337103.397419]] random: crng reseeded on system resumption
+May 25 14:29:02 aios-dev-host NetworkManager: <info> [14:29:02] device (eth0): state change: activated -> disconnected
+May 25 15:09:41 aios-dev-host systemd[1]: Restarted aios-daemon.service
+May 25 15:29:04 aios-dev-host CRON[7325]: (aios-user) CMD (/etc/cron.d/db_vacuum.sh) exit=1
+May 25 15:39:43 aios-dev-host sshd[3093]: pam_unix(sshd:session): session closed for user aios-user
+May 25 15:55:53 aios-dev-host kernel: [[ 343584.984872]] random: crng reseeded on system resumption
+May 25 16:14:49 aios-dev-host systemd[1]: Reloading sshd.service
+May 25 17:17:40 aios-dev-host CRON[1606]: (aios-user) CMD (/etc/cron.d/cleanup_logs.sh) exit=1
+May 25 18:03:10 aios-dev-host kernel: [[ 351222.749687]] random: crng reseeded on system resumption
+May 25 18:59:57 aios-dev-host kernel[5268]: WARN: Memory pressure detected. Available: 182mb / 7930MB
+May 25 19:11:48 aios-dev-host kernel: [[ 355339.780655]] random: crng reseeded on system resumption
+May 25 19:34:37 aios-dev-host NetworkManager: <info> [19:34:37] device (eth0): state change: config -> ip-config
+May 25 19:49:34 aios-dev-host rsyslog: rsyslogd was HUPed
+May 25 20:24:07 aios-dev-host CRON[2644]: (aios-user) CMD (/etc/cron.d/cleanup_logs.sh) exit=0
+May 25 20:46:07 aios-dev-host kernel[1]: ERROR: Failed to allocate 360MB for process redis-server (pid 64200)
+May 25 21:16:36 aios-dev-host kernel: [[ 362827.895757]] NET: Registered PF_INET6 protocol family
+May 25 21:46:05 aios-dev-host sshd[2531]: pam_unix(sshd:session): session opened for user aios-user by (uid=0)
+May 25 21:50:20 aios-dev-host NetworkManager: <info> [21:50:20] device (eth0): state change: activated -> disconnected
+May 25 22:08:13 aios-dev-host systemd[1]: Stopped aios-daemon.service
+May 25 22:39:57 aios-dev-host CRON[9617]: (aios-user) CMD (/etc/cron.d/db_vacuum.sh) exit=0
+May 25 22:40:37 aios-dev-host dbus-daemon[1]: [system] Activating via systemd: service name='org.freedesktop.nm' unit
+May 25 23:48:57 aios-dev-host kernel[1]: ERROR: Failed to allocate 158MB for process docker-proxy (pid 50497)
+May 26 00:44:36 aios-dev-host sshd[9331]: Invalid user admin from 10.0.0.102 port 40597
+May 26 02:03:25 aios-dev-host systemd[1]: Started aios-daemon.service
+May 26 02:07:29 aios-dev-host rsyslog: rsyslogd was HUPed
+May 26 02:47:29 aios-dev-host systemd[1]: Reloading sshd.service
+May 26 03:00:45 aios-dev-host kernel: [[ 383476.891492]] NET: Registered PF_INET6 protocol family
+May 26 04:22:00 aios-dev-host CRON[3361]: (aios-user) CMD (/etc/cron.d/db_vacuum.sh) exit=0
+May 26 04:43:15 aios-dev-host NetworkManager: <info> [04:43:15] connectivity check started
+May 26 05:24:27 aios-dev-host kernel[1]: ERROR: Failed to allocate 423MB for process embed-worker (pid 14182)
+May 26 05:36:48 aios-dev-host sshd[6060]: Invalid user admin from 10.0.0.56 port 47018
+May 26 06:40:20 aios-dev-host kernel: [[ 396651.362302]] usb 1-1: new high-speed USB device number 3 using xhci_hcd
+May 26 06:44:25 aios-dev-host sshd[8967]: Disconnected from user aios-user 192.168.1.59 port 47423
+May 26 07:45:27 aios-dev-host systemd[1]: Failed to start rsyslog.service
+May 26 08:24:08 aios-dev-host sshd[3538]: Accepted publickey for aios-user from 192.168.1.29 port 49692 ssh2
+May 26 08:33:01 aios-dev-host NetworkManager: <info> [08:33:01] connectivity check started
+May 26 08:33:58 aios-dev-host systemd[1]: Stopped redis.service
+May 26 10:29:49 aios-dev-host kernel: [ 410420.893370] INFO: task kworker/u8:0:499 blocked for more than 120 seconds
+May 26 10:34:03 aios-dev-host sshd[9317]: pam_unix(sshd:session): session closed for user aios-user
+May 26 11:01:56 aios-dev-host sshd[1618]: pam_unix(sshd:session): session closed for user aios-user
+May 26 11:41:56 aios-dev-host systemd[1]: Stopped docker.service
+May 26 12:03:37 aios-dev-host kernel[4486]: WARN: Memory pressure detected. Available: 560mb / 7930MB
+May 26 13:45:29 aios-dev-host systemd[1]: Restarted postgresql.service
+May 26 13:52:53 aios-dev-host sshd[3147]: Disconnected from user aios-user 192.168.1.162 port 52344
+May 26 13:58:35 aios-dev-host systemd[1]: Failed to start rsyslog.service
+May 26 14:28:35 aios-dev-host systemd[1]: Started docker.service
+May 26 15:19:38 aios-dev-host systemd[1]: Restarted docker.service
+May 26 16:42:54 aios-dev-host systemd[1]: Failed to start nginx.service
+May 26 16:51:38 aios-dev-host NetworkManager: <info> [16:51:38] device (eth0): state change: prepare -> config
+May 26 17:06:30 aios-dev-host kernel[3556]: WARN: Memory pressure detected. Available: 217mb / 7930MB
+May 26 17:45:09 aios-dev-host kernel: [[ 436540.279007]] usb 1-1: USB disconnect, device number 2
+May 26 17:57:09 aios-dev-host kernel: [[ 437260.823949]] NET: Registered PF_INET6 protocol family
+May 26 18:00:02 aios-dev-host kernel[5255]: WARN: Memory pressure detected. Available: 730mb / 7930MB
+May 26 18:08:11 aios-dev-host NetworkManager: <info> [18:08:11] device (eth0): state change: disconnected -> prepare
+May 26 18:10:26 aios-dev-host kernel: [[ 438057.512418]] usb 1-1: USB disconnect, device number 2
+May 26 18:21:13 aios-dev-host NetworkManager: <info> [18:21:13] device (eth0): state change: ip-config -> activated
+May 26 19:00:51 aios-dev-host systemd[1]: Started aios-daemon.service
+May 26 19:47:11 aios-dev-host kernel: [[ 443862.373180]] usb 1-1: new high-speed USB device number 3 using xhci_hcd
+May 26 19:54:57 aios-dev-host NetworkManager: <info> [19:54:57] device (eth0): state change: activated -> disconnected
+May 26 19:55:11 aios-dev-host kernel: [[ 444342.879830]] NET: Registered PF_INET6 protocol family
+May 26 20:32:52 aios-dev-host systemd[1]: Restarted cron.service
+May 26 20:49:44 aios-dev-host sshd[3658]: pam_unix(sshd:session): session closed for user aios-user
+May 26 21:08:07 aios-dev-host kernel: [[ 448718.097352]] random: crng reseeded on system resumption
+May 27 00:08:48 aios-dev-host kernel[8279]: WARN: Memory pressure detected. Available: 367mb / 7930MB
+May 27 00:14:27 aios-dev-host sshd[3712]: Accepted publickey for aios-user from 192.168.1.194 port 54341 ssh2
+May 27 00:17:53 aios-dev-host CRON[2225]: (aios-user) CMD (/etc/cron.d/db_vacuum.sh) exit=0
+May 27 00:28:30 aios-dev-host NetworkManager: <info> [00:28:30] device (eth0): state change: ip-config -> activated
+May 27 01:01:31 aios-dev-host systemd[1]: Failed to start networkd.service
+May 27 05:17:59 aios-dev-host sshd[7731]: Disconnected from user aios-user 192.168.1.103 port 62163
+May 27 05:28:08 aios-dev-host sshd[8277]: pam_unix(sshd:session): session opened for user aios-user by (uid=0)
+May 27 06:16:23 aios-dev-host rsyslog: rsyslogd was HUPed
+May 27 06:22:33 aios-dev-host systemd[1]: Restarted sshd.service
+May 27 07:02:35 aios-dev-host CRON[6546]: (aios-user) CMD (/etc/cron.d/db_vacuum.sh) exit=0
+May 27 07:09:17 aios-dev-host sshd[4833]: Invalid user admin from 10.0.0.146 port 47837
+May 27 07:44:03 aios-dev-host CRON[2315]: (aios-user) CMD (/etc/cron.d/sync_data.sh) exit=1
+May 27 07:46:19 aios-dev-host kernel: [ 487010.129874] INFO: task kworker/u8:4:902 blocked for more than 120 seconds
+May 27 08:09:35 aios-dev-host systemd[1]: Restarted cron.service
+May 27 08:58:40 aios-dev-host kernel: [[ 491351.769782]] usb 1-1: new high-speed USB device number 3 using xhci_hcd
+May 27 09:41:46 aios-dev-host CRON[6188]: (aios-user) CMD (/etc/cron.d/health_check.py) exit=1
+May 27 09:45:11 aios-dev-host CRON[2121]: (aios-user) CMD (/etc/cron.d/db_vacuum.sh) exit=0
+May 27 10:03:39 aios-dev-host kernel: [[ 495250.893446]] NET: Registered PF_INET6 protocol family
+May 27 10:31:06 aios-dev-host dbus-daemon[1]: [system] Activating via systemd: service name='org.freedesktop.nm' unit
+May 27 10:48:14 aios-dev-host CRON[4727]: (aios-user) CMD (/etc/cron.d/cleanup_logs.sh) exit=0
+May 27 10:49:36 aios-dev-host systemd[1]: Restarted nginx.service
+May 27 11:01:20 aios-dev-host systemd[1]: Stopped docker.service
+May 27 12:19:32 aios-dev-host CRON[2612]: (aios-user) CMD (/etc/cron.d/backup.sh) exit=1
+May 27 12:50:11 aios-dev-host sshd[8684]: Invalid user admin from 10.0.0.241 port 46357
+May 27 13:26:59 aios-dev-host kernel[7617]: WARN: Memory pressure detected. Available: 555mb / 7930MB
+May 27 13:33:18 aios-dev-host sshd[8218]: pam_unix(sshd:session): session opened for user aios-user by (uid=0)
+May 27 13:56:02 aios-dev-host NetworkManager: <info> [13:56:02] device (eth0): state change: ip-config -> activated
+May 27 14:14:36 aios-dev-host kernel: [ 510308.394862] INFO: task kworker/u8:7:392 blocked for more than 120 seconds
+May 27 14:29:23 aios-dev-host kernel[4439]: WARN: Memory pressure detected. Available: 296mb / 7930MB
+May 27 15:07:23 aios-dev-host dbus-daemon[1]: [system] Activating via systemd: service name='org.freedesktop.nm' unit
+May 27 15:43:09 aios-dev-host NetworkManager: <info> [15:43:09] device (eth0): state change: ip-config -> activated
+May 27 16:34:41 aios-dev-host CRON[3725]: (aios-user) CMD (/etc/cron.d/backup.sh) exit=1
+May 27 16:53:58 aios-dev-host systemd[1]: Failed to start redis.service
+May 27 16:56:32 aios-dev-host sshd[9239]: Disconnected from user aios-user 192.168.1.145 port 53718
+May 27 17:02:17 aios-dev-host NetworkManager: <info> [17:02:17] device (eth0): state change: prepare -> config
+May 27 17:10:31 aios-dev-host kernel: [[ 520862.899969]] audit: type=1400 audit([ 520862.899969]:1): apparmor="ALLOWED"
+May 27 18:34:20 aios-dev-host kernel[1]: ERROR: Failed to allocate 415MB for process java (pid 27148)
+May 27 18:37:52 aios-dev-host kernel: [[ 526104.038653]] NET: Registered PF_INET6 protocol family
+May 27 18:56:55 aios-dev-host CRON[1753]: (aios-user) CMD (/etc/cron.d/health_check.py) exit=0
+May 27 19:34:41 aios-dev-host CRON[5806]: (aios-user) CMD (/etc/cron.d/health_check.py) exit=0
+May 27 19:43:02 aios-dev-host rsyslog: rsyslogd was HUPed
+May 27 19:43:16 aios-dev-host systemd[1]: Restarted nginx.service
+May 27 20:02:48 aios-dev-host CRON[8056]: (aios-user) CMD (/etc/cron.d/health_check.py) exit=0
+May 27 20:56:52 aios-dev-host systemd[1]: Started resolved.service
+May 27 21:01:05 aios-dev-host sshd[4271]: Disconnected from user aios-user 192.168.1.215 port 59813
+May 27 21:04:49 aios-dev-host CRON[9702]: (aios-user) CMD (/etc/cron.d/cleanup_logs.sh) exit=0
+May 27 21:22:59 aios-dev-host kernel: [ 536010.598470] INFO: task kworker/u8:6:813 blocked for more than 120 seconds
+May 27 21:31:41 aios-dev-host NetworkManager: <info> [21:31:41] connectivity check started
+May 27 21:38:40 aios-dev-host kernel: [[ 536951.043974]] random: crng reseeded on system resumption
+May 27 21:39:17 aios-dev-host kernel: [[ 536988.163958]] audit: type=1400 audit([ 536988.163958]:1): apparmor="ALLOWED"
+May 27 21:54:32 aios-dev-host NetworkManager: <info> [21:54:32] device (eth0): state change: activated -> disconnected
+May 27 22:19:08 aios-dev-host kernel: [[ 539379.942540]] NET: Registered PF_INET6 protocol family
+May 27 22:43:36 aios-dev-host kernel: [[ 540848.930646]] random: crng reseeded on system resumption
+May 27 23:06:42 aios-dev-host NetworkManager: <info> [23:06:42] device (eth0): state change: config -> ip-config
+May 27 23:13:31 aios-dev-host kernel: [ 542642.986542] INFO: task kworker/u8:7:258 blocked for more than 120 seconds
+May 27 23:25:31 aios-dev-host kernel[4140]: WARN: Memory pressure detected. Available: 292mb / 7930MB
+May 27 23:39:55 aios-dev-host rsyslog: rsyslogd was HUPed
+May 28 00:21:54 aios-dev-host NetworkManager: <info> [00:21:54] device (eth0): state change: prepare -> config
+May 28 00:56:32 aios-dev-host kernel[1]: ERROR: Failed to allocate 393MB for process llm-worker (pid 25472)
+May 28 02:07:07 aios-dev-host systemd[1]: Stopped docker.service
+May 28 02:51:29 aios-dev-host kernel[8930]: WARN: Memory pressure detected. Available: 724mb / 7930MB
+May 28 05:00:40 aios-dev-host rsyslog: rsyslogd was HUPed
+May 28 05:32:22 aios-dev-host kernel: [[ 565374.700481]] audit: type=1400 audit([ 565374.700481]:1): apparmor="ALLOWED"
+May 28 05:58:25 aios-dev-host CRON[3785]: (aios-user) CMD (/etc/cron.d/db_vacuum.sh) exit=0
+May 28 06:22:54 aios-dev-host CRON[7267]: (aios-user) CMD (/etc/cron.d/cleanup_logs.sh) exit=0
+May 28 06:24:53 aios-dev-host CRON[9153]: (aios-user) CMD (/etc/cron.d/sync_data.sh) exit=0
+May 28 06:38:35 aios-dev-host systemd[1]: Started redis.service
+May 28 08:41:32 aios-dev-host systemd[1]: Reloading docker.service
+May 28 09:19:22 aios-dev-host kernel: [[ 578993.512254]] audit: type=1400 audit([ 578993.512254]:1): apparmor="ALLOWED"
+May 28 11:40:25 aios-dev-host sshd[5096]: pam_unix(sshd:session): session opened for user aios-user by (uid=0)
+May 28 11:59:59 aios-dev-host sshd[7081]: pam_unix(sshd:session): session closed for user aios-user
+May 28 14:28:57 aios-dev-host kernel: [[ 597568.153506]] NET: Registered PF_INET6 protocol family
+May 28 14:58:08 aios-dev-host CRON[4804]: (aios-user) CMD (/etc/cron.d/sync_data.sh) exit=0
+May 28 16:34:46 aios-dev-host sshd[3042]: Disconnected from user aios-user 192.168.1.82 port 42748
+May 28 16:41:17 aios-dev-host kernel[1]: ERROR: Failed to allocate 274MB for process docker-proxy (pid 30588)
+May 28 17:27:12 aios-dev-host kernel: [[ 608264.555630]] random: crng reseeded on system resumption
+May 28 18:18:31 aios-dev-host systemd[1]: Reloading aios-daemon.service
+May 28 18:21:23 aios-dev-host NetworkManager: <info> [18:21:23] connectivity check started
+May 28 18:28:06 aios-dev-host systemd[1]: Reloading docker.service
+May 28 19:07:18 aios-dev-host systemd[1]: Started cron.service
+May 28 19:39:05 aios-dev-host systemd[1]: Failed to start nginx.service
+May 28 19:50:06 aios-dev-host sshd[5469]: Disconnected from user aios-user 192.168.1.125 port 56821
+May 28 20:00:49 aios-dev-host sshd[8167]: pam_unix(sshd:session): session opened for user aios-user by (uid=0)
+May 28 20:53:17 aios-dev-host kernel: [[ 620628.283104]] usb 1-1: new high-speed USB device number 3 using xhci_hcd
+May 28 22:19:27 aios-dev-host dbus-daemon[1]: [system] Activating via systemd: service name='org.freedesktop.nm' unit
+May 28 22:27:13 aios-dev-host kernel: [[ 626264.214873]] random: crng reseeded on system resumption
+May 28 22:34:25 aios-dev-host rsyslog: rsyslogd was HUPed
+May 28 22:50:27 aios-dev-host kernel: [[ 627658.600682]] usb 1-1: new high-speed USB device number 3 using xhci_hcd
+May 28 22:51:47 aios-dev-host CRON[8529]: (aios-user) CMD (/etc/cron.d/db_vacuum.sh) exit=0
+May 29 00:32:33 aios-dev-host sshd[6727]: pam_unix(sshd:session): session opened for user aios-user by (uid=0)
+May 29 02:12:55 aios-dev-host systemd[1]: Stopped rsyslog.service
+May 29 02:41:24 aios-dev-host kernel[1]: ERROR: Failed to allocate 111MB for process node (pid 15725)
+May 29 02:56:58 aios-dev-host systemd[1]: Started nginx.service
+May 29 04:54:48 aios-dev-host kernel[1]: ERROR: Failed to allocate 82MB for process postgres (pid 2378)
+May 29 05:08:11 aios-dev-host systemd[1]: Started sshd.service
+May 29 05:43:21 aios-dev-host kernel[1]: ERROR: Failed to allocate 351MB for process docker-proxy (pid 16080)
+May 29 05:55:30 aios-dev-host CRON[8622]: (aios-user) CMD (/etc/cron.d/health_check.py) exit=0
+May 29 06:00:13 aios-dev-host NetworkManager: <info> [06:00:13] device (eth0): state change: config -> ip-config
+May 29 07:00:45 aios-dev-host systemd[1]: Stopped sshd.service
+May 29 07:44:04 aios-dev-host kernel[9677]: WARN: Memory pressure detected. Available: 419mb / 7930MB
+May 29 09:17:25 aios-dev-host rsyslog: rsyslogd was HUPed
+May 29 09:24:02 aios-dev-host kernel: [ 665673.207475] INFO: task kworker/u8:3:403 blocked for more than 120 seconds
+May 29 09:43:45 aios-dev-host kernel: [[ 666856.225908]] usb 1-1: new high-speed USB device number 3 using xhci_hcd
+May 29 09:44:23 aios-dev-host NetworkManager: <info> [09:44:23] connectivity check started
+May 29 09:57:38 aios-dev-host CRON[2210]: (aios-user) CMD (/etc/cron.d/health_check.py) exit=0
+May 29 10:08:23 aios-dev-host systemd[1]: Failed to start postgresql.service
+May 29 10:42:18 aios-dev-host NetworkManager: <info> [10:42:18] device (eth0): state change: activated -> disconnected
+May 29 10:50:15 aios-dev-host systemd[1]: Reloading aios-daemon.service
+May 29 12:00:13 aios-dev-host CRON[5901]: (aios-user) CMD (/etc/cron.d/db_vacuum.sh) exit=0
+May 29 12:36:43 aios-dev-host systemd[1]: Failed to start redis.service
+May 29 12:57:21 aios-dev-host systemd[1]: Reloading redis.service
+May 29 13:04:10 aios-dev-host kernel[9660]: WARN: Memory pressure detected. Available: 588mb / 7930MB
+May 29 13:39:25 aios-dev-host systemd[1]: Started resolved.service
+May 29 14:24:27 aios-dev-host systemd[1]: Restarted resolved.service
+May 29 14:46:30 aios-dev-host sshd[1872]: Invalid user admin from 10.0.0.111 port 56449
+May 29 15:12:09 aios-dev-host sshd[4862]: Invalid user admin from 10.0.0.108 port 42674
+May 29 15:33:02 aios-dev-host CRON[8484]: (aios-user) CMD (/etc/cron.d/db_vacuum.sh) exit=0
+May 29 15:54:08 aios-dev-host systemd[1]: Started sshd.service
+May 29 16:46:35 aios-dev-host kernel: [[ 692226.230170]] NET: Registered PF_INET6 protocol family
+May 29 17:09:12 aios-dev-host sshd[4678]: Accepted publickey for aios-user from 192.168.1.17 port 50442 ssh2
+May 29 17:39:28 aios-dev-host dbus-daemon[1]: [system] Activating via systemd: service name='org.freedesktop.nm' unit
+May 29 17:56:47 aios-dev-host sshd[6493]: Disconnected from user aios-user 192.168.1.212 port 44785
+May 29 18:06:37 aios-dev-host CRON[7302]: (aios-user) CMD (/etc/cron.d/health_check.py) exit=0
+May 29 19:00:29 aios-dev-host systemd[1]: Started sshd.service
+May 29 19:35:18 aios-dev-host kernel: [[ 702350.109566]] usb 1-1: USB disconnect, device number 2
+May 29 21:10:25 aios-dev-host NetworkManager: <info> [21:10:25] device (eth0): state change: prepare -> config
+May 29 21:30:57 aios-dev-host NetworkManager: <info> [21:30:57] device (eth0): state change: ip-config -> activated
+May 29 21:45:52 aios-dev-host CRON[4886]: (aios-user) CMD (/etc/cron.d/db_vacuum.sh) exit=0
+May 29 21:59:14 aios-dev-host kernel: [[ 710985.995959]] NET: Registered PF_INET6 protocol family
+May 29 22:14:08 aios-dev-host CRON[5847]: (aios-user) CMD (/etc/cron.d/db_vacuum.sh) exit=0
+May 29 22:20:45 aios-dev-host NetworkManager: <info> [22:20:45] device (eth0): state change: prepare -> config
+May 29 22:21:07 aios-dev-host sshd[1627]: Disconnected from user aios-user 192.168.1.83 port 55481
+May 29 22:39:38 aios-dev-host CRON[7484]: (aios-user) CMD (/etc/cron.d/health_check.py) exit=0
+May 29 22:53:48 aios-dev-host kernel[6030]: WARN: Memory pressure detected. Available: 558mb / 7930MB
+May 29 23:20:20 aios-dev-host rsyslog: rsyslogd was HUPed
+May 29 23:57:47 aios-dev-host NetworkManager: <info> [23:57:47] device (eth0): state change: prepare -> config
+May 30 00:25:33 aios-dev-host CRON[1803]: (aios-user) CMD (/etc/cron.d/health_check.py) exit=0
+May 30 00:44:28 aios-dev-host NetworkManager: <info> [00:44:28] device (eth0): state change: activated -> disconnected
+May 30 00:47:23 aios-dev-host CRON[5689]: (aios-user) CMD (/etc/cron.d/sync_data.sh) exit=1
+May 30 01:12:53 aios-dev-host NetworkManager: <info> [01:12:53] device (eth0): state change: ip-config -> activated
+May 30 01:25:53 aios-dev-host CRON[4588]: (aios-user) CMD (/etc/cron.d/cleanup_logs.sh) exit=0
+May 30 01:51:52 aios-dev-host sshd[8685]: Accepted publickey for aios-user from 192.168.1.124 port 60163 ssh2
+May 30 02:46:10 aios-dev-host kernel[2366]: WARN: Memory pressure detected. Available: 374mb / 7930MB
+May 30 03:20:20 aios-dev-host CRON[3240]: (aios-user) CMD (/etc/cron.d/cleanup_logs.sh) exit=0
+May 30 05:06:19 aios-dev-host kernel[1]: ERROR: Failed to allocate 351MB for process node (pid 1471)
+May 30 06:04:55 aios-dev-host kernel: [[ 740126.895935]] usb 1-1: new high-speed USB device number 3 using xhci_hcd
+May 30 06:56:21 aios-dev-host rsyslog: rsyslogd was HUPed
+May 30 07:04:53 aios-dev-host kernel: [[ 743724.489964]] random: crng reseeded on system resumption
+May 30 07:10:01 aios-dev-host NetworkManager: <info> [07:10:01] device (eth0): state change: ip-config -> activated
+May 30 08:05:05 aios-dev-host sshd[2298]: Disconnected from user aios-user 192.168.1.14 port 48386
+May 30 08:10:53 aios-dev-host sshd[3449]: pam_unix(sshd:session): session closed for user aios-user
+May 30 08:16:47 aios-dev-host CRON[6061]: (aios-user) CMD (/etc/cron.d/backup.sh) exit=0
+May 30 09:12:02 aios-dev-host systemd[1]: Started resolved.service
+May 30 10:15:43 aios-dev-host NetworkManager: <info> [10:15:43] device (eth0): state change: disconnected -> prepare
+May 30 10:18:58 aios-dev-host dbus-daemon[1]: [system] Activating via systemd: service name='org.freedesktop.nm' unit
+May 30 10:29:55 aios-dev-host kernel: [[ 756027.192043]] random: crng reseeded on system resumption
+May 30 10:39:51 aios-dev-host CRON[6977]: (aios-user) CMD (/etc/cron.d/db_vacuum.sh) exit=0
+May 30 11:42:51 aios-dev-host kernel[8185]: WARN: Memory pressure detected. Available: 671mb / 7930MB
+May 30 13:14:13 aios-dev-host sshd[9647]: Invalid user admin from 10.0.0.118 port 43643
+May 30 13:36:39 aios-dev-host systemd[1]: Reloading nginx.service
+May 30 15:10:42 aios-dev-host kernel[1]: ERROR: Failed to allocate 86MB for process embed-worker (pid 42359)
+May 30 15:21:10 aios-dev-host kernel: [[ 773502.626025]] random: crng reseeded on system resumption
+May 30 15:21:39 aios-dev-host NetworkManager: <info> [15:21:39] device (eth0): state change: disconnected -> prepare
+May 30 15:51:16 aios-dev-host kernel[1]: ERROR: Failed to allocate 80MB for process node (pid 5417)
+May 30 15:51:47 aios-dev-host kernel: [[ 775338.219074]] NET: Registered PF_INET6 protocol family
+May 30 16:39:13 aios-dev-host NetworkManager: <info> [16:39:13] connectivity check started
+May 30 17:09:11 aios-dev-host NetworkManager: <info> [17:09:11] device (eth0): state change: config -> ip-config
+May 30 17:15:57 aios-dev-host kernel: [[ 780389.288361]] random: crng reseeded on system resumption
+May 30 17:22:46 aios-dev-host systemd[1]: Reloading docker.service
+May 30 20:28:29 aios-dev-host NetworkManager: <info> [20:28:29] device (eth0): state change: disconnected -> prepare
+May 30 21:22:07 aios-dev-host systemd[1]: Reloading networkd.service
+May 30 21:52:57 aios-dev-host NetworkManager: <info> [21:52:57] device (eth0): state change: activated -> disconnected
+May 30 22:15:44 aios-dev-host systemd[1]: Restarted docker.service
+May 30 22:54:09 aios-dev-host sshd[4893]: Accepted publickey for aios-user from 192.168.1.87 port 43992 ssh2
+May 30 23:07:09 aios-dev-host CRON[5835]: (aios-user) CMD (/etc/cron.d/cleanup_logs.sh) exit=0
+May 31 00:34:51 aios-dev-host systemd[1]: Reloading docker.service
+May 31 00:38:52 aios-dev-host sshd[4906]: pam_unix(sshd:session): session closed for user aios-user
+May 31 00:53:07 aios-dev-host kernel: [[ 807819.296510]] audit: type=1400 audit([ 807819.296510]:1): apparmor="ALLOWED"
+May 31 00:53:36 aios-dev-host systemd[1]: Restarted redis.service
+May 31 01:31:09 aios-dev-host systemd[1]: Reloading networkd.service
+May 31 01:34:48 aios-dev-host systemd[1]: Restarted aios-daemon.service
+May 31 02:00:32 aios-dev-host kernel: [[ 811864.305999]] audit: type=1400 audit([ 811864.305999]:1): apparmor="ALLOWED"
+May 31 02:56:41 aios-dev-host sshd[8489]: pam_unix(sshd:session): session opened for user aios-user by (uid=0)
+May 31 03:03:20 aios-dev-host CRON[3877]: (aios-user) CMD (/etc/cron.d/health_check.py) exit=1
+May 31 04:19:45 aios-dev-host kernel: [[ 820216.506346]] random: crng reseeded on system resumption
+May 31 04:27:45 aios-dev-host sshd[9782]: pam_unix(sshd:session): session closed for user aios-user
+May 31 04:48:33 aios-dev-host systemd[1]: Reloading resolved.service
+May 31 05:32:45 aios-dev-host kernel[1]: ERROR: Failed to allocate 66MB for process postgres (pid 5643)
+May 31 05:39:56 aios-dev-host systemd[1]: Started sshd.service
+May 31 07:29:25 aios-dev-host systemd[1]: Stopped aios-daemon.service
+May 31 08:07:12 aios-dev-host CRON[9837]: (aios-user) CMD (/etc/cron.d/cleanup_logs.sh) exit=0
+May 31 08:25:32 aios-dev-host NetworkManager: <info> [08:25:32] device (eth0): state change: prepare -> config
+May 31 08:40:26 aios-dev-host systemd[1]: Failed to start resolved.service
+May 31 09:40:07 aios-dev-host dbus-daemon[1]: [system] Activating via systemd: service name='org.freedesktop.nm' unit
+May 31 11:45:53 aios-dev-host kernel: [[ 846985.844852]] random: crng reseeded on system resumption
+May 31 12:07:14 aios-dev-host systemd[1]: Started rsyslog.service
+May 31 12:08:11 aios-dev-host kernel[871]: WARN: Memory pressure detected. Available: 243mb / 7930MB
+May 31 12:55:29 aios-dev-host sshd[4963]: Invalid user admin from 10.0.0.193 port 44704
+May 31 13:02:52 aios-dev-host rsyslog: rsyslogd was HUPed
+May 31 13:35:44 aios-dev-host systemd[1]: Stopped rsyslog.service
+May 31 14:52:58 aios-dev-host sshd[8032]: Invalid user admin from 10.0.0.10 port 60146
+May 31 14:53:48 aios-dev-host rsyslog: rsyslogd was HUPed
+May 31 14:54:17 aios-dev-host dbus-daemon[1]: [system] Activating via systemd: service name='org.freedesktop.nm' unit
+May 31 15:46:28 aios-dev-host NetworkManager: <info> [15:46:28] device (eth0): state change: ip-config -> activated
+May 31 15:51:29 aios-dev-host NetworkManager: <info> [15:51:29] device (eth0): state change: prepare -> config
+May 31 16:11:00 aios-dev-host kernel: [[ 862892.633626]] NET: Registered PF_INET6 protocol family
+May 31 17:04:26 aios-dev-host kernel[2604]: WARN: Memory pressure detected. Available: 262mb / 7930MB
+May 31 17:22:51 aios-dev-host kernel: [[ 867202.681620]] audit: type=1400 audit([ 867202.681620]:1): apparmor="ALLOWED"
+May 31 17:37:33 aios-dev-host kernel: [[ 868085.784655]] audit: type=1400 audit([ 868085.784655]:1): apparmor="ALLOWED"
+May 31 18:39:13 aios-dev-host kernel[1]: ERROR: Failed to allocate 313MB for process node (pid 19250)
+May 31 18:56:51 aios-dev-host sshd[4941]: Disconnected from user aios-user 192.168.1.156 port 53650
+May 31 20:42:03 aios-dev-host kernel: [[ 879154.279439]] NET: Registered PF_INET6 protocol family
+May 31 20:50:41 aios-dev-host NetworkManager: <info> [20:50:41] device (eth0): state change: activated -> disconnected
+May 31 20:53:26 aios-dev-host sshd[2402]: Accepted publickey for aios-user from 192.168.1.144 port 51816 ssh2
+May 31 23:17:40 aios-dev-host CRON[3695]: (aios-user) CMD (/etc/cron.d/health_check.py) exit=0
+May 31 23:28:14 aios-dev-host systemd[1]: Reloading sshd.service

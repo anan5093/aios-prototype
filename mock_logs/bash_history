@@ -1,0 +1,400 @@
+lsmem
+systemctl cat nginx
+systemctl disable nginx
+git remote -v
+chmod +x scripts/generate_mock_logs.py
+df -h
+tail -100 mock_logs/syslog
+curl -X POST http://localhost:8080/api/query -d '{"q":"OOM"}'
+docker ps -a
+git commit -m "fix: handle zero-norm embeddings"
+fg %1
+nload eth0
+systemctl enable aios-daemon
+df -h --output=source,fstype,size,used,avail,pcent
+head -50 mock_logs/bash_history
+pip install sentence-transformers faiss-cpu pymongo python-dotenv
+who
+perf stat python daemon/main.py
+ls -la scripts/
+python --version
+docker ps
+python -m pytest tests/ --cov=daemon --cov-report=html
+python -m pytest tests/test_embedder.py -v
+systemctl show postgresql --property=MainPID
+top -b -n 1 | head -20
+git commit -m "test: add atlas connection test"
+netstat -tulnp
+htop
+nload eth0
+find . -name '*.log' -mtime -1
+journalctl --since "yesterday"
+pidstat -u 1 5
+cat mock_logs/kern.log | grep OOM
+vim mock_logs/syslog
+mkdir -p data/backups
+jobs
+env | grep ATLAS
+iotop -o
+nethogs eth0
+watch -n 1 free -h
+python -m pytest tests/ --cov=daemon --cov-report=html
+gzip -9 mock_logs/syslog
+python scripts/generate_mock_logs.py
+df -i
+cd api && node server.js --port=3000
+journalctl -b -1 -n 100
+killall -9 node
+ls -la daemon/
+tail -f mock_logs/kern.log
+journalctl --since "yesterday"
+df -h --output=source,fstype,size,used,avail,pcent
+npx nodemon api/server.js
+chrt -f 50 python daemon/main.py
+cat /proc/meminfo
+perf top
+iostat -d 1 5
+make test
+wget https://example.com/dataset.tar.gz
+screen -S monitor
+curl http://localhost:8080/health
+history | tail -50
+env | grep ATLAS
+nohup python daemon/main.py &
+systemctl daemon-reload
+journalctl -p err -n 50
+journalctl -k -n 50
+git branch -a
+systemctl reload nginx
+du -sh mock_logs/
+grep -c 'ERROR' mock_logs/syslog
+nice -n -10 ./high_priority_task.sh
+python -m pytest tests/test_embedder.py -v
+ps aux --sort=-%mem | head -20
+watch -n 1 free -h
+pip freeze > requirements.txt
+cd frontend && npm run build
+python daemon/main.py --log-level=DEBUG
+last | head -20
+python daemon/main.py
+systemctl start nginx
+python daemon/main.py --debug
+cat .env
+rsync -avz mock_logs/ remote:/backup/logs/
+python -m pstats profile.out
+npm audit fix
+cp data/faiss_metadata.pkl data/backups/faiss_metadata.pkl.bak
+journalctl -u aios-daemon --since today
+python scripts/ingest_mock_logs.py
+iostat -x 1 5
+git fetch --all
+systemctl enable aios-daemon
+renice -n 15 -p 3456
+git remote -v
+tmux new -s aios
+echo $PYTHONPATH
+sort mock_logs/bash_history | uniq | wc -l
+journalctl --disk-usage
+renice -n -5 -p 1847
+git stash
+nethogs -t
+journalctl -u nginx -f
+git branch -a
+df -i
+ssh-keygen -t ed25519 -C 'aios-dev'
+systemctl cat nginx
+disown %1
+python -m pytest tests/ -k 'test_oom'
+kill -15 2341
+uname -r
+git checkout -b feature/oom-detection
+python scripts/test_atlas_connection.py
+nano daemon/embedder.py
+git add -A
+sar -u 1 5
+git commit -m "feat: add faiss vector store"
+git push origin feature/oom-detection
+journalctl -n 200 --no-pager
+pidstat -d 1 5
+grep -n 'soft lockup' mock_logs/kern.log
+journalctl --since "2 hours ago" --until "1 hour ago"
+free -g
+jobs
+git tag -a v0.1.0 -m 'initial prototype'
+history | tail -50
+clear
+make all
+ps -eo pid,ppid,cmd,%mem,%cpu --sort=-%mem | head -15
+docker-compose down
+python -m venv venv
+cat mock_logs/kern.log | grep OOM
+git commit -m "fix: handle zero-norm embeddings"
+python -c 'import faiss; print(faiss.__version__)'
+vmstat 2 10
+chmod +x scripts/generate_mock_logs.py
+docker ps
+systemctl status redis
+git checkout main
+sort mock_logs/bash_history | uniq | wc -l
+sar -r 1 5
+systemctl status postgresql
+lsof -i :8080
+python -m pytest tests/ -v --tb=short
+git log --oneline -10
+pgrep -a python
+vmstat 2 10
+npm run test
+iotop
+systemctl list-units --type=service
+python -c 'from daemon.faiss_store import FAISSStore; print("ok")'
+ls -lh data/
+iftop -i eth0
+iotop -o
+htop -d 5
+systemctl status aios-daemon
+nice -n -10 ./high_priority_task.sh
+cat data/simulation_state.json | python -m json.tool
+docker ps -a
+gzip -9 mock_logs/syslog
+journalctl -p warning -n 100
+curl -X POST http://localhost:8080/api/query -d '{"q":"OOM"}'
+systemctl list-units --state=failed
+echo $PATH
+npm run dev
+deactivate
+sed -n '1,100p' mock_logs/syslog
+chrt -f 50 python daemon/main.py
+valgrind --leak-check=full python daemon/main.py
+journalctl -u aios-daemon --since today
+git log --graph --oneline --all -15
+node -e 'console.log(process.version)'
+grep -c 'Out of memory' mock_logs/kern.log
+docker logs aios-container --tail 50
+nohup python daemon/main.py &
+vmstat -s
+python -m cProfile -o profile.out daemon/main.py
+cd frontend && npm run build
+git tag -a v0.1.0 -m 'initial prototype'
+less mock_logs/syslog
+systemctl restart redis
+iostat -x 1 10
+which python
+nethogs
+git add -A
+watch -n 2 df -h
+python -c 'from daemon.embedder import EmbeddingService; e=EmbeddingService(); print(e.embed_single("test").shape)'
+pidstat -u 1 5
+deactivate
+pip install -r daemon/requirements.txt
+iostat -x 1 10
+grep 'WARN' mock_logs/syslog | tail -20
+iotop -b -n 5
+journalctl -k --since today
+pkill -9 chrome
+ps aux --sort=-%mem | head -20
+gunzip mock_logs/syslog.gz
+ls -la scripts/
+cd api && node server.js
+pgrep -a python
+git add daemon/embedder.py
+vmstat 1 5
+cp data/faiss_metadata.pkl data/backups/faiss_metadata.pkl.bak
+kill -9 1847
+git commit -m "fix: memory leak in embedder"
+lsof -i :5432
+iftop -i eth0
+diff mock_logs/syslog.old mock_logs/syslog
+awk '{print $5}' mock_logs/syslog | sort | uniq -c | sort -rn
+npm list
+systemctl status docker
+pip install sentence-transformers faiss-cpu pymongo python-dotenv
+git log --oneline -20
+netstat -tulnp
+npm install
+git pull origin main
+rsync -avz mock_logs/ remote:/backup/logs/
+watch -n 5 'systemctl list-units --failed'
+lsmem
+git commit -m "chore: update requirements"
+git diff
+nethogs eth0
+cat data/simulation_state.json | python -m json.tool
+journalctl --vacuum-size=500M
+npm audit
+npm audit
+systemctl restart postgresql
+systemctl stop nginx
+docker-compose up -d
+ls -la data/
+tar -xzf dataset.tar.gz -C data/
+npm update
+ss -tunap
+journalctl -b 0 -p err
+scp data/faiss_index.bin remote:/backup/
+npx nodemon api/server.js
+python -m venv venv
+ps aux --sort=-%cpu | head -20
+free -h
+journalctl -u nginx -f
+kill -SIGTERM 3456
+cat /proc/cpuinfo | grep 'model name' | head -1
+python scripts/ingest_mock_logs.py
+ulimit -a
+tmux attach -t aios
+git diff
+less mock_logs/syslog
+python -m pytest tests/ -v
+ps aux | grep python
+renice -n 15 -p 3456
+systemctl stop nginx
+lsof -i :5432
+node -e 'console.log(process.version)'
+ulimit -v 4000000
+kill -SIGTERM 3456
+pip show sentence-transformers
+ls -la mock_logs/
+export PYTHONPATH=$PYTHONPATH:$(pwd)
+pip list | grep faiss
+git add daemon/embedder.py
+git commit -m "chore: update requirements"
+taskset -c 0-3 python daemon/main.py
+journalctl -n 100
+journalctl --since "1 hour ago"
+git stash pop
+python --version
+python scripts/inject_panic.py
+ss -tunap
+lsof -i :6379
+systemctl start nginx
+pwd
+pgrep -a chrome
+cut -d' ' -f1-3 mock_logs/syslog | uniq -c | sort -rn | head
+make clean
+gunzip mock_logs/syslog.gz
+systemctl list-units --state=failed
+cd frontend && npm run dev
+docker exec -it aios-container bash
+nano daemon/embedder.py
+cat mock_logs/syslog | tail -50
+make test
+python -c 'from daemon.faiss_store import FAISSStore; print("ok")'
+ls -la daemon/
+cut -d' ' -f1-3 mock_logs/syslog | uniq -c | sort -rn | head
+scp data/faiss_index.bin remote:/backup/
+mpstat -P ALL 1 5
+python scripts/test_atlas_connection.py
+bmon
+python -m pstats profile.out
+find . -name '*.py' | xargs wc -l | sort -rn | head
+unset ATLAS_URI
+uname -r
+systemctl status nginx
+pkill -f 'python daemon'
+git log --oneline -20
+git diff HEAD~1
+npm run build
+clear
+git diff HEAD~1
+htop -d 5
+top
+cp data/faiss_index.bin data/backups/faiss_index.bin.bak
+python scripts/generate_mock_logs.py
+nice -n 5 python script.py
+python -m pytest tests/ -k 'test_oom'
+find . -name '*.log' -mtime -1
+dmidecode -t memory | grep -i size
+python -c 'from daemon.embedder import EmbeddingService; e=EmbeddingService(); print(e.embed_single("test").shape)'
+git push origin main
+pkill -f 'python daemon'
+kill -15 2341
+taskset -c 0-3 python daemon/main.py
+find . -name '*.py' | xargs wc -l | sort -rn | head
+du -sh data/
+ltrace -p 2341 -c
+journalctl -p err -n 50
+python scripts/inject_panic.py
+ps aux --sort=-%cpu | head -20
+cat mock_logs/syslog | tail -50
+journalctl -u postgresql -n 50
+journalctl -n 50
+dstat --cpu --mem --disk --net
+perf stat python daemon/main.py
+unset ATLAS_URI
+grep -c 'ERROR' mock_logs/syslog
+lsof -i :8080
+grep 'WARN' mock_logs/syslog | tail -20
+tmux attach -t aios
+who
+screen -S monitor
+echo $PYTHONPATH
+fg %1
+cat data/simulation_state.json
+docker logs aios-container --tail 50
+grep -n 'soft lockup' mock_logs/kern.log
+cat .env
+ulimit -a
+pgrep -a chrome
+dstat --cpu --mem --disk --net
+git commit -m "test: add atlas connection test"
+systemctl status postgresql
+cp .env.example .env
+git fetch --all
+pip install -r requirements.txt
+tail -f mock_logs/syslog
+lsof -i :6379
+awk '{print $5}' mock_logs/syslog | sort | uniq -c | sort -rn
+watch -n 2 df -h
+ls -la mock_logs/
+journalctl -b 0 -p err
+systemctl list-units --failed
+export PYTHONPATH=$PYTHONPATH:$(pwd)
+cp .env.example .env
+npm run lint
+sed -n '1,100p' mock_logs/syslog
+cd api && node server.js --port=3000
+renice -n -5 -p 1847
+pip list | grep faiss
+sar -d 1 5
+git log --graph --oneline --all -15
+iostat -d 1 5
+free -m
+npm run build
+renice -n 10 -p 2341
+diff mock_logs/syslog.old mock_logs/syslog
+sar -r 1 5
+python -m cProfile -o profile.out daemon/main.py
+grep -c 'Out of memory' mock_logs/kern.log
+wget https://example.com/dataset.tar.gz
+python -m pytest tests/ -v --tb=short
+strace -p 1847 -c
+tmux new -s aios
+uptime
+systemctl status docker
+npm update
+du -sh data/
+wc -l mock_logs/syslog mock_logs/kern.log mock_logs/bash_history
+ulimit -v 4000000
+chmod +x scripts/inject_panic.py
+journalctl --since "2 hours ago" --until "1 hour ago"
+git checkout -b feature/oom-detection
+which python
+journalctl -b -1 -n 100
+python -c 'import faiss; print(faiss.__version__)'
+ltrace -p 2341 -c
+journalctl -n 100
+git status
+vim mock_logs/syslog
+source venv/bin/activate
+systemctl daemon-reload
+killall -9 node
+journalctl -k -n 50
+dmidecode -t memory | grep -i size
+nice -n 19 ./low_priority_backup.sh
+ssh-keygen -t ed25519 -C 'aios-dev'
+export ATLAS_URI='mongodb+srv://user:pass@cluster.mongodb.net/'
+mkdir -p data/backups
+lscpu
+journalctl -u daemon.service -f
+make all
+docker stats --no-stream
+du -sh mock_logs/
