@@ -571,6 +571,7 @@ async def _periodic_metrics(interval_seconds: int = 10) -> None:
             metrics = {
                 "cpu_percent": psutil.cpu_percent(interval=None),
                 "memory_percent": psutil.virtual_memory().percent,
+                "memory_available_mb": psutil.virtual_memory().available // (1024 * 1024),
                 "faiss_vector_count": faiss_store.get_vector_count(),
                 "atlas_doc_count": atlas_count,
                 "daemon_uptime_seconds": uptime,

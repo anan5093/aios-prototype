@@ -41,6 +41,72 @@ function formatNumber(n: number): string {
   return String(n);
 }
 
+function mapRawMetrics(data: any): MetricsData {
+  if (!data) {
+    return {
+      cpu_percent: 0,
+      ram_used_gb: 0,
+      ram_total_gb: 16,
+      faiss_vectors: 0,
+      atlas_docs: 0,
+      daemon_uptime_seconds: 0,
+      query_count: 0,
+      avg_latency_ms: 0,
+    };
+  }
+
+  const cpu_percent = typeof data.cpu_percent === 'number' ? data.cpu_percent : 0;
+
+  let ram_used_gb = 0;
+  let ram_total_gb = 16;
+
+  if (typeof data.ram_used_gb === 'number' && typeof data.ram_total_gb === 'number') {
+    ram_used_gb = data.ram_used_gb;
+    ram_total_gb = data.ram_total_gb;
+  } else if (typeof data.memory_percent === 'number') {
+    const memPercent = data.memory_percent;
+    if (typeof data.memory_available_mb === 'number') {
+      const availGb = data.memory_available_mb / 1024;
+      if (memPercent < 100 && memPercent >= 0) {
+        ram_total_gb = availGb / (1 - memPercent / 100);
+        ram_used_gb = Math.max(0, ram_total_gb - availGb);
+      } else {
+        ram_total_gb = availGb;
+        ram_used_gb = availGb;
+      }
+    } else {
+      ram_total_gb = 16;
+      ram_used_gb = (memPercent / 100) * 16;
+    }
+  }
+
+  const faiss_vectors = typeof data.faiss_vectors === 'number'
+    ? data.faiss_vectors
+    : (typeof data.faiss_vector_count === 'number' ? data.faiss_vector_count : 0);
+
+  const atlas_docs = typeof data.atlas_docs === 'number'
+    ? data.atlas_docs
+    : (typeof data.atlas_doc_count === 'number' ? data.atlas_doc_count : 0);
+
+  const daemon_uptime_seconds = typeof data.daemon_uptime_seconds === 'number'
+    ? data.daemon_uptime_seconds
+    : 0;
+
+  const query_count = typeof data.query_count === 'number' ? data.query_count : 0;
+  const avg_latency_ms = typeof data.avg_latency_ms === 'number' ? data.avg_latency_ms : 0;
+
+  return {
+    cpu_percent,
+    ram_used_gb,
+    ram_total_gb,
+    faiss_vectors,
+    atlas_docs,
+    daemon_uptime_seconds,
+    query_count,
+    avg_latency_ms,
+  };
+}
+
 // ─── Sub-Components ───────────────────────────────────────────────────────────
 
 /** SVG circular progress ring for CPU usage */
@@ -306,16 +372,17 @@ export function MetricsPanel({ wsMetrics, wsConnected }: MetricsPanelProps) {
   // Apply WebSocket metrics when they arrive
   useEffect(() => {
     if (wsMetrics) {
-      uptimeRef.current = wsMetrics.daemon_uptime_seconds;
-      setMetrics(wsMetrics);
+      const mapped = mapRawMetrics(wsMetrics);
+      uptimeRef.current = mapped.daemon_uptime_seconds;
+      setMetrics(mapped);
     }
   }, [wsMetrics]);
 
   // Fallback polling when WebSocket is not connected
   const fetchMetrics = useCallback(async () => {
     try {
-      const { data } = await axios.get<MetricsData>('/api/metrics');
-      setMetrics(data);
+      const { data } = await axios.get<any>('/api/metrics');
+      setMetrics(mapRawMetrics(data));
     } catch {
       // Silently ignore — we keep showing last known values
     }
