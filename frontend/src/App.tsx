@@ -188,6 +188,7 @@ function DashboardContent() {
   const [latencyMs, setLatencyMs] = useState<number | null>(null);
   const [ragChunks, setRagChunks] = useState<RagChunk[]>([]);
   const [wsMetrics, setWsMetrics] = useState<MetricsData | undefined>(undefined);
+  const [isStreaming, setIsStreaming] = useState(false);
 
   // Setup live WebSocket handlers
   const { connected } = useWebSocket('/stream', {
@@ -199,6 +200,7 @@ function DashboardContent() {
     stream_done: (data) => {
       if (typeof data.latency_ms === 'number') {
         setLatencyMs(data.latency_ms);
+        setIsStreaming(false);
       }
     },
     intent_parsed: (data) => {
@@ -207,8 +209,8 @@ function DashboardContent() {
       }
     },
     validation_result: (data) => {
-      if (typeof data.status === 'string') {
-        setValidationStatus(data.status);
+      if (typeof data.result === 'string') {
+        setValidationStatus(data.result);
       }
       if (typeof data.intent_id === 'number') {
         setValidationIntentId(data.intent_id);
@@ -220,7 +222,8 @@ function DashboardContent() {
       }
     },
     metrics_update: (data) => {
-      const { type: _, ...metrics } = data;
+      const metricsPayload = data.metrics ? data.metrics : data;
+      const { type: _, ...metrics } = metricsPayload as Record<string, unknown>;
       setWsMetrics(metrics as unknown as MetricsData);
     },
   });
@@ -232,10 +235,6 @@ function DashboardContent() {
     setValidationIntentId(null);
     setLatencyMs(null);
     setRagChunks([]);
-  };
-
-  const handleStreamDone = (latency: number) => {
-    setLatencyMs(latency);
   };
 
   const handleApprove = (_intentId: number) => {
@@ -351,9 +350,13 @@ function DashboardContent() {
         {/* Left Column: Interactivity */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
           <QueryForm
-            onQueryId={handleQueryId}
+            onQueryId={(id) => {
+              handleQueryId(id);
+              setIsStreaming(true);
+            }}
             onTokenReceived={(tok) => setStreamingTokens((p) => p + tok)}
-            onStreamDone={handleStreamDone}
+            isStreaming={isStreaming}
+            setIsStreaming={setIsStreaming}
           />
           <ReasoningTrace
             streamingTokens={streamingTokens}

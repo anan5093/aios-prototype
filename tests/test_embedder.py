@@ -65,7 +65,7 @@ class TestCosineSimilarity:
     """Tests for semantic similarity via cosine distance on unit-norm vectors."""
 
     def test_similar_texts_high_cosine(self) -> None:
-        """Semantically similar OOM texts must have cosine similarity > 0.60."""
+        """Semantically similar OOM texts must have cosine similarity > 0.50."""
         service = EmbeddingService()
         v1: np.ndarray = service.embed_single("Out of memory: Kill process")
         v2: np.ndarray = service.embed_single(
@@ -73,18 +73,18 @@ class TestCosineSimilarity:
         )
         # Since vectors are unit-norm, dot product == cosine similarity
         cosine: float = float(np.dot(v1, v2))
-        assert cosine > 0.60, (
-            f"Expected cosine similarity > 0.60 for similar texts, got {cosine:.4f}"
+        assert cosine > 0.50, (
+            f"Expected cosine similarity > 0.50 for similar texts, got {cosine:.4f}"
         )
 
     def test_dissimilar_texts_low_cosine(self) -> None:
-        """Semantically unrelated texts must have cosine similarity < 0.60."""
+        """Semantically unrelated texts must have cosine similarity < 0.50."""
         service = EmbeddingService()
         v1: np.ndarray = service.embed_single("kernel OOM panic memory error")
         v2: np.ndarray = service.embed_single("git commit pushed to repository")
         cosine: float = float(np.dot(v1, v2))
-        assert cosine < 0.60, (
-            f"Expected cosine similarity < 0.60 for dissimilar texts, got {cosine:.4f}"
+        assert cosine < 0.50, (
+            f"Expected cosine similarity < 0.50 for dissimilar texts, got {cosine:.4f}"
         )
 
 

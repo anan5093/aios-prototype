@@ -1,0 +1,6 @@
+{
+  "versionNumber": 1,
+  "name": "simple-test",
+  "description": "Simple RAG system sanity check",
+  "definition": "@kbench.task(name=\"simple-test\", description=\"Simple RAG system sanity check\")\ndef simple_test(llm) -> None:\n    response = llm.prompt(\"Hello! Are you ready?\")\n    kbench.assertions.assert_true(\n        len(response) > 0, expectation=\"Response is not empty\"\n    )\n"
+}

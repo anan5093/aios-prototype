@@ -15,7 +15,7 @@ const { requireRole } = require('../middleware/rbac');
 const router = express.Router();
 
 /** Base URL of the Python daemon. */
-const DAEMON_BASE = 'http://localhost:8765';
+const DAEMON_BASE = 'http://127.0.0.1:8765';
 
 // ---------------------------------------------------------------------------
 // GET /api/intents

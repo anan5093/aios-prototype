@@ -10,6 +10,15 @@ import os
 import sys
 import pytest
 
+
+@pytest.fixture(autouse=True)
+def mock_sniffio():
+    """Ensure sniffio detects the asyncio library during tests under Python 3.14."""
+    import sniffio
+    token = sniffio.current_async_library_cvar.set("asyncio")
+    yield
+    sniffio.current_async_library_cvar.reset(token)
+
 # ---------------------------------------------------------------------------
 # Path bootstrap — ensure daemon modules are importable
 # ---------------------------------------------------------------------------

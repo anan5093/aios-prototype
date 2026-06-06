@@ -7,14 +7,14 @@ import { useAuth } from '../hooks/useAuth';
 export interface QueryFormProps {
   onQueryId: (queryId: string) => void;
   onTokenReceived: (token: string) => void;
-  onStreamDone: (latencyMs: number) => void;
+  isStreaming?: boolean;
+  setIsStreaming?: (isStreaming: boolean) => void;
 }
 
 interface QueryResponse {
   query_id: string;
   status: string;
   message?: string;
-  backend?: 'cloud' | 'local';
 }
 
 // ─── Spinner ─────────────────────────────────────────────────────────────────
@@ -38,15 +38,22 @@ function Spinner() {
 
 // ─── Main Component ───────────────────────────────────────────────────────────
 
-export function QueryForm({ onQueryId, onTokenReceived: _onTokenReceived, onStreamDone }: QueryFormProps) {
+export function QueryForm({
+  onQueryId,
+  onTokenReceived: _onTokenReceived,
+  isStreaming: propIsStreaming,
+  setIsStreaming: propSetIsStreaming,
+}: QueryFormProps) {
   const { hasRole, token } = useAuth();
   const [query, setQuery] = useState('');
-  const [isStreaming, setIsStreaming] = useState(false);
+  const [localIsStreaming, localSetIsStreaming] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [queryId, setQueryId] = useState<string | null>(null);
-  const [backend, setBackend] = useState<'cloud' | 'local' | null>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const startTimeRef = useRef<number>(0);
+
+  const isStreaming = propIsStreaming !== undefined ? propIsStreaming : localIsStreaming;
+  const setIsStreaming = propSetIsStreaming !== undefined ? propSetIsStreaming : localSetIsStreaming;
 
   const canSubmit = hasRole('operator');
 
@@ -62,7 +69,6 @@ export function QueryForm({ onQueryId, onTokenReceived: _onTokenReceived, onStre
     if (!query.trim() || isStreaming || !canSubmit) return;
     setError(null);
     setQueryId(null);
-    setBackend(null);
     setIsStreaming(true);
     startTimeRef.current = Date.now();
 
@@ -82,9 +88,6 @@ export function QueryForm({ onQueryId, onTokenReceived: _onTokenReceived, onStre
         setQueryId(data.query_id);
         onQueryId(data.query_id);
       }
-      if (data.backend) {
-        setBackend(data.backend);
-      }
     } catch (err: unknown) {
       const axiosErr = err as { response?: { data?: { detail?: string } }; message?: string };
       const msg =
@@ -94,7 +97,7 @@ export function QueryForm({ onQueryId, onTokenReceived: _onTokenReceived, onStre
       setError(msg);
       setIsStreaming(false);
     }
-  }, [query, isStreaming, canSubmit, token, onQueryId]);
+  }, [query, isStreaming, canSubmit, token, onQueryId, setIsStreaming]);
 
   // Called by parent (via DashboardPage) when stream_done event arrives
   // We expose a way for parent to signal stream completion via a prop callback
@@ -118,35 +121,6 @@ export function QueryForm({ onQueryId, onTokenReceived: _onTokenReceived, onStre
   // We need a way for App to tell QueryForm that streaming is done.
   // We'll expose a ref. But the spec says just props. Let's use a context/event approach:
   // We wrap onStreamDone to also set isStreaming = false here.
-  const wrappedOnStreamDone = useCallback(
-    (latencyMs: number) => {
-      setIsStreaming(false);
-      onStreamDone(latencyMs);
-    },
-    [onStreamDone],
-  );
-
-  // Also expose wrappedOnStreamDone as the callback App should actually call.
-  // We'll use a ref to store it so App always calls the current version.
-  // Since App uses the prop directly, we pass wrappedOnStreamDone down.
-  // Actually the props are fixed at mount. We need a more flexible approach.
-  // The cleanest: QueryForm exposes an imperative handle.
-  // For simplicity, let's store a ref and watch for changes.
-
-  // DESIGN DECISION: The `onStreamDone` prop passed to QueryForm IS the
-  // wrapped version — App.tsx will pass `(ms) => { setLatencyMs(ms); queryForm.current?.stopStreaming(ms); }`
-  // but since we can't use imperative handles easily without forwardRef,
-  // let's keep isStreaming state in App.tsx instead, and use a `isStreaming` prop here.
-  // But the spec says to have streaming state here... 
-
-  // RESOLUTION: We keep streaming true until App signals done. We do this by
-  // checking if `onStreamDone` fires in a useEffect. We store it as ref.
-
-  const onStreamDoneRef = useRef(wrappedOnStreamDone);
-  useEffect(() => {
-    onStreamDoneRef.current = wrappedOnStreamDone;
-  }, [wrappedOnStreamDone]);
-
   const handleKeyDown = useCallback(
     (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
       if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) {
@@ -161,10 +135,9 @@ export function QueryForm({ onQueryId, onTokenReceived: _onTokenReceived, onStre
     setQuery('');
     setError(null);
     setQueryId(null);
-    setBackend(null);
     setIsStreaming(false);
     textareaRef.current?.focus();
-  }, []);
+  }, [setIsStreaming]);
 
   return (
     <div
@@ -215,30 +188,6 @@ export function QueryForm({ onQueryId, onTokenReceived: _onTokenReceived, onStre
           <span style={{ color: 'var(--accent-primary)', fontSize: '1rem' }}>◈</span>
           Query Interface
         </h2>
-
-        {/* Backend badge */}
-        {backend && (
-          <div
-            style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: 5,
-              padding: '3px 10px',
-              borderRadius: 9999,
-              background:
-                backend === 'cloud' ? 'var(--accent-primary-dim)' : 'var(--accent-success-dim)',
-              border: `1px solid ${backend === 'cloud' ? 'rgba(59,130,246,0.25)' : 'rgba(16,185,129,0.25)'}`,
-              fontSize: '0.7rem',
-              fontWeight: 600,
-              color: backend === 'cloud' ? 'var(--accent-primary)' : 'var(--accent-success)',
-              fontFamily: 'var(--font-sans)',
-              letterSpacing: '0.05em',
-              textTransform: 'uppercase',
-            }}
-          >
-            {backend === 'cloud' ? '☁' : '🖥'} {backend}
-          </div>
-        )}
       </div>
 
       {/* Permission warning for viewer */}

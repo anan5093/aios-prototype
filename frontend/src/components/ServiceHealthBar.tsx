@@ -22,7 +22,6 @@ interface HealthApiResponse {
 const SERVICE_KEYS: Array<{ key: string; label: string }> = [
   { key: 'faiss', label: 'FAISS' },
   { key: 'atlas', label: 'Atlas' },
-  { key: 'colab_tunnel', label: 'Colab Tunnel' },
   { key: 'local_ollama', label: 'Local Ollama' },
   { key: 'daemon', label: 'Daemon' },
 ];

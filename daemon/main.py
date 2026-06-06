@@ -428,7 +428,7 @@ async def _get_health(request: web.Request) -> web.Response:
     """
     GET /health
 
-    Checks FAISS, Atlas, cloud Ollama, and local Ollama liveness.
+    Checks FAISS, Atlas, and local Ollama liveness.
     """
     assert faiss_store is not None
     assert inference_client is not None
@@ -443,17 +443,13 @@ async def _get_health(request: web.Request) -> web.Response:
         except Exception:
             atlas_ok = False
 
-    cloud_url = inference_client._cloud_endpoint
     local_url = inference_client._local_endpoint
-
-    cloud_ok = await inference_client.health_check(cloud_url) if cloud_url else False
-    local_ok = await inference_client.health_check(local_url)
+    local_ok = await inference_client.health_check(local_url, timeout=1.0)
 
     return web.json_response(
         {
             "faiss": {"ok": faiss_ok, "vector_count": faiss_store.get_vector_count()},
             "atlas": {"ok": atlas_ok},
-            "cloud_ollama": {"ok": cloud_ok, "url": cloud_url},
             "local_ollama": {"ok": local_ok, "url": local_url},
         }
     )
@@ -645,11 +641,8 @@ async def main() -> None:
 
     inference_client = InferenceClient(
         config={
-            "OLLAMA_ENDPOINT": os.getenv("OLLAMA_ENDPOINT", ""),
             "LOCAL_OLLAMA": os.getenv("LOCAL_OLLAMA", "http://localhost:11434"),
             "MODEL_NAME": os.getenv("MODEL_NAME", "llama3"),
-            "NGROK_AUTH_USER": os.getenv("NGROK_AUTH_USER", ""),
-            "NGROK_AUTH_PASS": os.getenv("NGROK_AUTH_PASS", ""),
         }
     )
 

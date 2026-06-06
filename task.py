@@ -19,10 +19,15 @@ def run_task():
     print("=== Installing Python dependencies ===")
     subprocess.run("pip install pyngrok -q", shell=True, check=True)
     from pyngrok import ngrok
+    from pyngrok.exception import PyngrokNgrokHTTPError
 
     print("=== Deploying Ollama Environment ===")
-    # Install zstd (required by newer Ollama install scripts for extraction)
-    subprocess.run("apt-get update && apt-get install -y zstd", shell=True, check=True)
+    # Install zstd only if missing
+    if subprocess.run("which zstd", shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL).returncode != 0:
+        print("Installing zstd...")
+        subprocess.run("apt-get update && apt-get install -y zstd", shell=True, check=True)
+    else:
+        print("✅ zstd already installed.")
     subprocess.run("curl -fsSL https://ollama.com/install.sh | sh", shell=True, check=True)
 
     print("=== Initializing Local Instance Pipeline ===")
@@ -35,7 +40,18 @@ def run_task():
 
     print("=== Creating Encrypted Ngrok Gateway ===")
     ngrok.set_auth_token(NGROK_AUTH_TOKEN)
-    tunnel = ngrok.connect(OLLAMA_PORT, "http")
+    try:
+        tunnel = ngrok.connect(OLLAMA_PORT, "http")
+    except PyngrokNgrokHTTPError as e:
+        if "ERR_NGROK_334" in str(e):
+            print("\n" + "❌" * 20)
+            print("CRITICAL ERROR: Your Ngrok static domain is already online in another active Kaggle kernel or local instance.")
+            print("To resolve this:")
+            print("1. Go to https://www.kaggle.com/code/anand6450/ollama-gpu-ngrok-host")
+            print("2. Click 'Cancel Run' or 'Stop Session' on the active run(s) to release the tunnel.")
+            print("3. Push the kernel again to start a fresh session.")
+            print("❌" * 20 + "\n")
+        raise e
     
     print("\n" + "🚀" * 20)
     print(f"KAGGLE BENCHMARK ACTIVE URL: {tunnel.public_url}")

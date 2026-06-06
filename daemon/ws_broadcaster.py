@@ -72,6 +72,23 @@ class WebSocketBroadcaster:
             event_type: String identifier for the event kind.
             payload:    Additional key/value data to include in the message.
         """
+        # Relay to Express API server in the background
+        async def relay_to_express():
+            import httpx
+            import os
+            try:
+                port = os.getenv("PORT", "5000")
+                url = f"http://127.0.0.1:{port}/internal-ws-relay"
+                async with httpx.AsyncClient(timeout=1.0) as client:
+                    await client.post(
+                        url,
+                        json={"type": event_type, **payload}
+                    )
+            except Exception as e:
+                self._logger.debug(f"Failed to relay event to Express: {e!r}")
+
+        asyncio.create_task(relay_to_express())
+
         if not self._connections:
             return
 

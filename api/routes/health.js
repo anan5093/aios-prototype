@@ -45,7 +45,6 @@ router.get('/', async (req, res) => {
     daemon:       false,
     faiss:        false,
     atlas:        false,
-    colab_tunnel: false,
     local_ollama: false,
     timestamp,
   };
@@ -57,7 +56,7 @@ router.get('/', async (req, res) => {
 
     let daemonHealth;
     try {
-      const response = await fetch('http://localhost:8765/health', {
+      const response = await fetch('http://127.0.0.1:8765/health', {
         signal: controller.signal,
       });
       daemonHealth = await response.json();
@@ -67,10 +66,9 @@ router.get('/', async (req, res) => {
 
     // Daemon is reachable — pull sub-service statuses from its response.
     health.daemon       = true;
-    health.faiss        = Boolean(daemonHealth?.faiss        ?? daemonHealth?.faiss_available);
-    health.atlas        = Boolean(daemonHealth?.atlas        ?? daemonHealth?.atlas_available);
-    health.colab_tunnel = Boolean(daemonHealth?.colab_tunnel ?? daemonHealth?.colab_tunnel_active);
-    health.local_ollama = Boolean(daemonHealth?.local_ollama ?? daemonHealth?.ollama_available);
+    health.faiss        = Boolean(daemonHealth?.faiss?.ok ?? daemonHealth?.faiss ?? daemonHealth?.faiss_available);
+    health.atlas        = Boolean(daemonHealth?.atlas?.ok ?? daemonHealth?.atlas ?? daemonHealth?.atlas_available);
+    health.local_ollama = Boolean(daemonHealth?.local_ollama?.ok ?? daemonHealth?.local_ollama ?? daemonHealth?.ollama_available);
   } catch (err) {
     // Daemon unreachable or timed out — all sub-services stay false.
     console.warn('[HEALTH] Daemon unreachable:', err.message);

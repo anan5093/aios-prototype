@@ -51,7 +51,7 @@ router.get('/', async (req, res, next) => {
     let daemonData;
 
     try {
-      const response = await fetch('http://localhost:8765/metrics');
+      const response = await fetch('http://127.0.0.1:8765/metrics');
       daemonData = await response.json();
     } catch (fetchErr) {
       console.warn('[METRICS] Daemon unavailable:', fetchErr.message);

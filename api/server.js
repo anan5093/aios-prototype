@@ -52,7 +52,11 @@ const server = http.createServer(app);
 // 1. CORS
 app.use(
   cors({
-    origin:      process.env.FRONTEND_URL || 'http://localhost:3000',
+    origin: [
+      'http://localhost:3000',
+      'http://127.0.0.1:3000',
+      process.env.FRONTEND_URL
+    ].filter(Boolean),
     credentials: true,
   }),
 );
@@ -161,7 +165,7 @@ wss.on('connection', (ws) => {
 /** Push daemon metrics into the ring buffer and broadcast to WS clients. */
 async function pollDaemonMetrics() {
   try {
-    const response = await fetch('http://localhost:8765/metrics');
+    const response = await fetch('http://127.0.0.1:8765/metrics');
     const metrics  = await response.json();
 
     // Also record in the metrics route's ring buffer so /api/metrics/history

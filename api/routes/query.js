@@ -57,7 +57,7 @@ router.post('/', requireRole('operator'), async (req, res, next) => {
     // Forward to daemon
     // ------------------------------------------------------------------
     try {
-      await fetch('http://localhost:8765/query', {
+      await fetch('http://127.0.0.1:8765/query', {
         method:  'POST',
         headers: { 'Content-Type': 'application/json' },
         body:    JSON.stringify({ query: query.trim(), query_id }),
