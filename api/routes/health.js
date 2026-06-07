@@ -50,9 +50,9 @@ router.get('/', async (req, res) => {
   };
 
   try {
-    // AbortController gives us a clean 2-second timeout.
+    // AbortController gives us a clean 4-second timeout.
     const controller = new AbortController();
-    const timeoutId  = setTimeout(() => controller.abort(), 2000);
+    const timeoutId  = setTimeout(() => controller.abort(), 4000);
 
     let daemonHealth;
     try {

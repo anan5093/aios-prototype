@@ -52,6 +52,10 @@ class EmbeddingService:
                         f"Model '{self.model_name}' loaded in {time.time() - t0:.2f}s"
                     )
 
+    def preload(self) -> None:
+        """Eagerly load the model to avoid first-query latency."""
+        self._ensure_model_loaded()
+
     def embed(self, texts: list[str]) -> np.ndarray:
         """
         Embed a list of texts and return L2-normalised vectors.

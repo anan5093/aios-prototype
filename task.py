@@ -32,7 +32,11 @@ def run_task():
 
     print("=== Initializing Local Instance Pipeline ===")
     os.environ["OLLAMA_HOST"] = f"0.0.0.0:{OLLAMA_PORT}"
-    ollama_proc = subprocess.Popen(["ollama", "serve"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    ollama_proc = subprocess.Popen(
+        ["ollama", "serve"], 
+        stdout=subprocess.DEVNULL, 
+        stderr=subprocess.DEVNULL
+    )
     time.sleep(6) # Safe buffer for network handshake
 
     print(f"=== Downloading Weights: {MODEL_NAME} ===")

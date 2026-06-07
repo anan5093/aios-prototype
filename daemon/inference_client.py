@@ -99,12 +99,12 @@ class InferenceClient:
         )
 
         try:
-            # Set connection timeout to 3s and read timeout to 10s to fail fast
+            # Set connection timeout to 10s and read timeout to 300s for remote cloud tunnels
             timeout_config = httpx.Timeout(
-                connect=3.0,
-                read=10.0,
-                write=5.0,
-                pool=5.0
+                connect=10.0,
+                read=300.0,
+                write=30.0,
+                pool=30.0
             )
             async with httpx.AsyncClient(timeout=timeout_config) as client:
                 async with client.stream(

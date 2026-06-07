@@ -297,7 +297,7 @@ async def handle_query(query: str, query_id: str) -> None:
 
     # Step 3: RAG retrieval
     try:
-        chunks = await retriever.retrieve(query, k_each=5)
+        chunks = await retriever.retrieve(query, k_each=3)
     except Exception as exc:
         logger.exception(f"Retrieval failed for query_id={query_id}: {exc!r}")
         chunks = []
@@ -444,7 +444,7 @@ async def _get_health(request: web.Request) -> web.Response:
             atlas_ok = False
 
     local_url = inference_client._local_endpoint
-    local_ok = await inference_client.health_check(local_url, timeout=1.0)
+    local_ok = await inference_client.health_check(local_url, timeout=2.5)
 
     return web.json_response(
         {
@@ -639,9 +639,15 @@ async def main() -> None:
 
     sanitiser = TelemetrySanitiser()
 
+    local_ollama = os.getenv("LOCAL_OLLAMA", "http://localhost:11434")
+    ollama_endpoint = os.getenv("OLLAMA_ENDPOINT", "")
+    if local_ollama == "http://localhost:11434" and ollama_endpoint and "ngrok" in ollama_endpoint:
+        logger.info(f"Overriding default LOCAL_OLLAMA with OLLAMA_ENDPOINT: {ollama_endpoint}")
+        local_ollama = ollama_endpoint
+
     inference_client = InferenceClient(
         config={
-            "LOCAL_OLLAMA": os.getenv("LOCAL_OLLAMA", "http://localhost:11434"),
+            "LOCAL_OLLAMA": local_ollama,
             "MODEL_NAME": os.getenv("MODEL_NAME", "llama3"),
         }
     )
@@ -659,11 +665,14 @@ async def main() -> None:
         executor=executor,
     )
 
-    # Step 5: Load FAISS index
+    # Step 5: Load FAISS index & Eagerly preload embedding model
     global main_loop
     loop = asyncio.get_event_loop()
     main_loop = loop
-    await loop.run_in_executor(executor, faiss_store.load_or_create)
+    await asyncio.gather(
+        loop.run_in_executor(executor, faiss_store.load_or_create),
+        loop.run_in_executor(executor, embedder.preload)
+    )
     logger.info(
         f"FAISS store ready. Vectors: {faiss_store.get_vector_count()}"
     )
