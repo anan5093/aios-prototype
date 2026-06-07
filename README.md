@@ -50,6 +50,16 @@
       <p align="center"><strong>Operator View</strong> — AI suggests log rotation for syslog (90% confidence)</p>
     </td>
   </tr>
+  <tr>
+    <td width="50%">
+      <img src="docs/screenshots/06_login_portal_metrics.png" alt="Sleek login portal with metrics and demo operator quick-fill" />
+      <p align="center"><strong>Sleek Login Portal</strong> — Dual-column layout with live metrics and profile quick-fill</p>
+    </td>
+    <td width="50%">
+      <img src="docs/screenshots/07_register_pam_verification.png" alt="Operator registration with admin PAM verification check" />
+      <p align="center"><strong>Admin PAM Verification</strong> — Register locked behind administrator sudo checks</p>
+    </td>
+  </tr>
 </table>
 
 ---

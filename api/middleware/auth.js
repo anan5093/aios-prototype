@@ -10,7 +10,7 @@
 const jwt = require('jsonwebtoken');
 
 /** Routes that do not require a valid JWT. */
-const SKIP_PATHS = ['/api/auth/login', '/api/health', '/api/health/', '/internal-ws-relay'];
+const SKIP_PATHS = ['/api/auth/login', '/api/auth/register', '/api/auth/admin-status', '/api/health', '/api/health/', '/internal-ws-relay'];
 
 /**
  * Express middleware that enforces JWT authentication.

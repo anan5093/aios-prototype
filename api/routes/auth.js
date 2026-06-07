@@ -96,4 +96,119 @@ router.post('/login', (req, res) => {
   });
 });
 
+// ---------------------------------------------------------------------------
+// GET /api/auth/admin-status
+// ---------------------------------------------------------------------------
+router.get('/admin-status', (req, res) => {
+  const adminExists = USERS_DB.some((u) => u.role === 'admin');
+  return res.status(200).json({ adminExists });
+});
+
+// ---------------------------------------------------------------------------
+// POST /api/auth/register
+// ---------------------------------------------------------------------------
+router.post('/register', (req, res) => {
+  const { email, password, role, adminVerifyPassword } = req.body || {};
+
+  if (!email || !password || !role) {
+    return res.status(400).json({ error: 'Bad Request', message: '`email`, `password`, and `role` are required.' });
+  }
+
+  // Check if an admin exists
+  const adminExists = USERS_DB.some((u) => u.role === 'admin');
+
+  if (!adminExists) {
+    // 1st Registered person becomes admin automatically
+    const existing = USERS_DB.find((u) => u.email === email.toLowerCase().trim());
+    if (existing) {
+      return res.status(400).json({ error: 'Bad Request', message: 'User already exists.' });
+    }
+
+    const newUser = {
+      email: email.toLowerCase().trim(),
+      hash: bcrypt.hashSync(password, 12),
+      role: 'admin', // Force admin role for the first user
+    };
+    USERS_DB.push(newUser);
+    return res.status(201).json({
+      message: 'No administrator was found. First user registered successfully as System Administrator.',
+      user: { email: newUser.email, role: newUser.role }
+    });
+  }
+
+  // Admin exists, so authorization is required
+  const authHeader = req.headers['authorization'] || '';
+  const parts = authHeader.split(' ');
+
+  if (parts.length !== 2 || parts[0].toLowerCase() !== 'bearer' || !parts[1]) {
+    return res.status(401).json({
+      error: 'Unauthorized',
+      message: 'Registration requires an active administrator session.',
+    });
+  }
+
+  const token = parts[1];
+  let decoded;
+  try {
+    decoded = jwt.verify(token, process.env.JWT_SECRET);
+  } catch (err) {
+    return res.status(401).json({
+      error: 'Unauthorized',
+      message: 'Invalid or expired administrator session.',
+    });
+  }
+
+  // Must have admin role
+  if (decoded.role !== 'admin') {
+    return res.status(403).json({
+      error: 'Forbidden',
+      message: 'Only administrators can register new operators.',
+    });
+  }
+
+  // Find the logged-in admin in the database
+  const loggedInAdmin = USERS_DB.find((u) => u.email === decoded.sub.toLowerCase().trim());
+  if (!loggedInAdmin) {
+    return res.status(401).json({
+      error: 'Unauthorized',
+      message: 'Active administrator account not found.',
+    });
+  }
+
+  // PAM-style verification: Admin must verify their own password
+  if (!adminVerifyPassword) {
+    return res.status(400).json({
+      error: 'Bad Request',
+      message: 'Administrator password verification (PAM check) is required to authorize registration.',
+    });
+  }
+
+  const matches = bcrypt.compareSync(adminVerifyPassword, loggedInAdmin.hash);
+  if (!matches) {
+    return res.status(401).json({
+      error: 'Unauthorized',
+      message: 'Administrator password verification failed (PAM check rejected).',
+    });
+  }
+
+  // Check if new user already exists
+  const existing = USERS_DB.find((u) => u.email === email.toLowerCase().trim());
+  if (existing) {
+    return res.status(400).json({ error: 'Bad Request', message: 'User already exists.' });
+  }
+
+  // Validations passed, register new user
+  const newUser = {
+    email: email.toLowerCase().trim(),
+    hash: bcrypt.hashSync(password, 12),
+    role: role,
+  };
+  USERS_DB.push(newUser);
+
+  return res.status(201).json({
+    message: 'User registered successfully by Administrator.',
+    user: { email: newUser.email, role: newUser.role }
+  });
+});
+
 module.exports = router;
