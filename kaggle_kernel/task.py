@@ -12,7 +12,7 @@ def run_task():
         return
 
     # Configuration Constants
-    NGROK_AUTH_TOKEN = "3EgV9w6ylxoBs067IbovSmpfjSv_eD4BhXJXRZ6w9rkgKVdx" 
+    NGROK_AUTH_TOKEN = "Yor_ngrok_token" 
     MODEL_NAME = "llama3"
     OLLAMA_PORT = 11434
 
